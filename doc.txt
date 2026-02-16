@@ -1,0 +1,2016 @@
+# Introducing Fluid
+
+**Fluid** is a next generation **all-in-one DeFi** hub, enabling users to seamlessly access lending, vaults, and DEX strategies from one unified interface.
+
+Fluid's innovative features, including its liquidity layer, automated limits, lending and vault protocols, robust oracle system, and DEX protocol, collectively create a revolutionary financial layer poised to redefine how DeFi users interact with the ecosystem.
+
+### Fluid isn’t just a protocol, it’s the engine driving the next era of DeFi. <a href="#fluid-isnt-just-a-protocol-its-the-engine-driving-the-next-era-of-defi" id="fluid-isnt-just-a-protocol-its-the-engine-driving-the-next-era-of-defi"></a>
+
+Fluid is the culmination of years of pioneering work in the decentralized finance (DeFi) landscape by Instadapp. With a rich history of simplifying underlying DeFi protocols and introducing sophisticated strategies, Fluid represents a new frontier in DeFi innovation.Built upon the foundation of liquidity consolidation, automated limits, and cutting-edge protocols, *Fluid stands as the most advanced, secure, and flexible lending protocol in the DeFi space*. This protocol not only simplifies user experiences but also paves the way for a more efficient and interconnected DeFi ecosystem.
+
+**Discover Fluid’s vision in this blog by our Co-Founder, Samyak Jain:**
+
+{% embed url="<https://blog.instadapp.io/fluid/>" %}
+
+
+
+
+# Simulation Mode
+
+Simulation Mode lets you try Fluid features like lending, borrowing and vaults using test balances. It’s perfect for beginners who want to explore before using real funds.
+
+## Why Use Simulation Mode?
+
+* No real tokens or gas fees required.
+* Safe to explore features like lending, borrowing, vault and Multiply.
+* Helps you build confidence before going live.
+
+{% hint style="info" %}
+Make sure your EOA wallet (e.g, Metamask) is connected before activating Simulation Mode
+{% endhint %}
+
+## How to Activate Simulation Mode&#x20;
+
+Step-by-Step guide -
+
+1. Connect your EOA wallet (top-right corner).
+2. Click the “Simulation Mode” toggle on the top right.
+3. A pop-up will appear to create a test environment.
+4. You’ll be asked if you want to add test collateral, choose token and amount to begin.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FUGX0eLnXLwaCV8qBoqIt%2FV1.gif?alt=media&#x26;token=887dc4fc-1aba-4330-9655-78c485e97110" alt=""><figcaption><p>Activate the Simulation Mode</p></figcaption></figure>
+
+{% hint style="info" %}
+You can activate the Simulation Mode at any time! Utilize it with the your current Fluid positions to test changes before committing on-chain.
+{% endhint %}
+
+## Adding Test Collateral&#x20;
+
+After Simulation Mode is active -&#x20;
+
+1. Select Top-up Balance.
+2. Choose token (e.g, ETH, wstETH, USDC).
+3. Enter the amount and click “Top Up”, you will instantly receive simulated tokens.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2Fr2ZjwE0jCC69gBT8c97H%2FV2.gif?alt=media&#x26;token=a322dc03-0a2e-4e69-86f9-c039373131f7" alt=""><figcaption><p>Add any amount of Collateral to help you test</p></figcaption></figure>
+
+## Turning Off Simulation Mode
+
+Want to go back to live view?
+
+Just toggle off the Simulation Mode switch on the top bar. Your wallet will reconnect to the real fluid environment.
+
+
+
+# Simulation Mode
+
+Simulation Mode lets you try Fluid features like lending, borrowing and vaults using test balances. It’s perfect for beginners who want to explore before using real funds.
+
+## Why Use Simulation Mode?
+
+* No real tokens or gas fees required.
+* Safe to explore features like lending, borrowing, vault and Multiply.
+* Helps you build confidence before going live.
+
+{% hint style="info" %}
+Make sure your EOA wallet (e.g, Metamask) is connected before activating Simulation Mode
+{% endhint %}
+
+## How to Activate Simulation Mode&#x20;
+
+Step-by-Step guide -
+
+1. Connect your EOA wallet (top-right corner).
+2. Click the “Simulation Mode” toggle on the top right.
+3. A pop-up will appear to create a test environment.
+4. You’ll be asked if you want to add test collateral, choose token and amount to begin.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FUGX0eLnXLwaCV8qBoqIt%2FV1.gif?alt=media&#x26;token=887dc4fc-1aba-4330-9655-78c485e97110" alt=""><figcaption><p>Activate the Simulation Mode</p></figcaption></figure>
+
+{% hint style="info" %}
+You can activate the Simulation Mode at any time! Utilize it with the your current Fluid positions to test changes before committing on-chain.
+{% endhint %}
+
+## Adding Test Collateral&#x20;
+
+After Simulation Mode is active -&#x20;
+
+1. Select Top-up Balance.
+2. Choose token (e.g, ETH, wstETH, USDC).
+3. Enter the amount and click “Top Up”, you will instantly receive simulated tokens.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2Fr2ZjwE0jCC69gBT8c97H%2FV2.gif?alt=media&#x26;token=a322dc03-0a2e-4e69-86f9-c039373131f7" alt=""><figcaption><p>Add any amount of Collateral to help you test</p></figcaption></figure>
+
+## Turning Off Simulation Mode
+
+Want to go back to live view?
+
+Just toggle off the Simulation Mode switch on the top bar. Your wallet will reconnect to the real fluid environment.
+
+
+
+# Interacting with the Lending Protocol
+
+Fluid’s lending interface is designed for simplicity, making it easy to deposit your assets and start earning yield from both lending and fluid rewards.
+
+## What is Lending on Fluid?
+
+When you deposit your tokens (like USDC, ETH, or USDT), they get supplied into Fluid’s lending pools. These tokens can then be borrowed by other users. In return, you earn -
+
+* **Lending APR** - interest from borrowers
+* **Rewards APR** - bonus rewards from the protocol
+* Combined, this gives you your **Net APR**
+
+## How to Start Lending
+
+1. Connect your wallet (EOA, DSA, or Avocado)
+2. Go to the [**Lend**](https://fluid.io/lending/1) tab on the Fluid dashboard
+3. Choose the token you want to deposit (e.g, USDC or ETH)
+4. Click **Start Earning**
+5. Enter the amount to deposit
+6. Approve the token if it’s your first time
+7. Confirm the deposit transaction in your wallet
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F5WIjSrZ4ZMuR2ox9nlST%2FV5.gif?alt=media&#x26;token=21f7487f-fb13-4bfd-a6e5-8481cef3d5e7" alt=""><figcaption><p>Scroll over of the Info to see the APR breakdown and Simply Deposit to Start Earning</p></figcaption></figure>
+
+Once done, you’ll immediately start earning yield. 🎉
+
+{% hint style="info" %}
+*Hover over the **Net APR** to view the detailed breakdown (Lending APR + Rewards APR / Staking APR)*
+{% endhint %}
+
+## Withdrawing Your Deposit
+
+To withdraw -
+
+1. Click **Start Earning**
+2. Go to the **Withdraw** tab
+3. Enter the amount you want to withdraw
+4. Confirm the transaction in your wallet
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FdRB3ig8wizkOWDWit3Vr%2FV6.gif?alt=media&#x26;token=7ac3577f-3b03-4dbb-a487-6a943cadd763" alt=""><figcaption><p>Enter the amount you want to Withdraw and Confirm the transaction</p></figcaption></figure>
+
+Your funds will return to your connected wallet instantly after confirmation.
+
+{% hint style="info" %}
+Rewards from lending are usually included in your Net APR, but in some cases, they may appear separately on the dashboard. No manual claim is needed if already withdrawn with your liquidity.
+{% endhint %}
+
+{% hint style="info" %}
+Learn more about [liquidity-rewards](https://fluid.guides.instadapp.io/lending-protocol/miscellaneous/liquidity-rewards "mention") on the Lending Protocol
+{% endhint %}
+
+
+
+# Fluid Vault Protocol
+
+Fluid Vaults are isolated borrowing positions that allow users to borrow assets against specific collateral types while optimizing for capital efficiency and strategy flexibility.
+
+Built on top of Fluid's modular Liquidity Layer, these vaults offer -
+
+* **Highest LTVs**(Loan to value)**,** borrow up to 95% of your collateral’s value
+* **Better rates** for both lenders and borrowers
+* Ultra-low **liquidation penalty** (as low as 0.1%)
+* **Automated ceilings** to prevent risky whale movements
+* **Efficient liquidations** with 3–4× lower gas costs
+* **Maximum capital efficiency** through unified liquidity across protocols
+
+{% hint style="info" %}
+You can create multiple vaults based on different asset pairs, manage risk individually, and explore powerful strategy, all directly within the Borrow section of the Fluid app.
+{% endhint %}
+
+## Getting Started with a Vault
+
+Here’s how you can open a vault on Fluid and start borrowing:
+
+### Open a Vault Position
+
+* Connect your wallet (EOA, DSA, or Avocado)
+* Go to the [**Borrow**](https://fluid.io/dashboard/1) tab on the Fluid dashboard.
+* Use filters or the search bar to find the vault you want to use, based on your **collateral** and **debt asset** preferences.
+* Select a vault and click **Create Position** to begin setting up your vault.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2Ftz9YyvSmvXhXo2jAzAgP%2Fimage2.avif?alt=media&#x26;token=5f9a193e-163c-47e7-96a5-24d4de1baed7" alt=""><figcaption><p>The Vault protocol Dashboard</p></figcaption></figure>
+
+{% hint style="info" %}
+Vaults are not created on chain until you actually deposit collateral. You can open any vault to see more details. \
+Want to learn or test a strategy? Activate [Simulation Mode](https://open-2v.gitbook.com/url/preview/site_LYe7Z/~/revisions/8R4TO7Fz7U7fsqxRX3G1/user-guide/simulation-mode) to explore vaults and run numbers, no real funds needed.
+{% endhint %}
+
+### Creating a Position <a href="#creating-a-position" id="creating-a-position"></a>
+
+* After clicking **Create Position**, the vault interface will open.
+* Click **Deposit** under the **Collateral** section.
+* Enter the amount of collateral you want to supply and confirm the transaction.
+* Once deposited, click **Borrow** under the **Debt** section.
+* Choose the amount you wish to borrow, review the health ratio and liquidation metrics, then confirm.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FoJQSELXVUkfoEWsjiL0p%2FV7.gif?alt=media&#x26;token=be60a132-890f-40cc-b1a8-c84956b0ed82" alt=""><figcaption><p>Lock your collateral and borrow debt against it</p></figcaption></figure>
+
+### Manage Your Vault <a href="#manage-your-vault" id="manage-your-vault"></a>
+
+Once your vault is created, you can:
+
+* View your deposited collateral and borrowed amount
+* Monitor **Net APY**, **Health Ratio**, and **Liquidation Price**
+* Access **Vault Strategies** to enhance or rebalance your position:
+  * Leverage / Deleverage
+  * Payback & Withdraw
+  * Deposit & Borrow
+  * Vault Swap
+  * Warp / Unwarp
+
+{% hint style="info" %}
+[Click here](https://fluid.guides.instadapp.io/vault-protocol/protocol-details#position-parameters) to explore detailed explanations of key Vault parameters.
+{% endhint %}
+
+## Close Your Vault <a href="#close-your-vault" id="close-your-vault"></a>
+
+To close your vault, you can use either of these two options:
+
+* **Payback** – Repay your full debt from your wallet. After that, you can **withdraw your collateral** (the same asset you deposited).
+* **Deleverage** – Reduce your position by using part of your collateral to repay the debt. In this case, you’ll receive your **remaining collateral in the form of the debt token**.
+
+Your vault is considered closed once both your **debt is repaid** and your **collateral is withdrawn**.
+
+
+
+# Net APY
+
+## What is Net APY? <a href="#what-is-net-apy" id="what-is-net-apy"></a>
+
+Net APY (Annual Percentage Yield) tells you the effective yield you're earning on your position after accounting for both:
+
+* Earnings from your supplied assets
+* Interest paid on your borrowed assets
+
+It represents your actual return on your net capital (what you own after borrowing), annualized at current rates.
+
+#### Why Does Net APY Matter? <a href="#why-does-net-apy-matter" id="why-does-net-apy-matter"></a>
+
+* Shows your true performance in a leverage vault
+* Helps you compare whether a strategy is worth it after borrow costs
+* Influences your decision to loop more, deleverage, or exit
+
+### How is Net APY Calculated? <a href="#how-is-net-apy-calculated" id="how-is-net-apy-calculated"></a>
+
+**Formula -**
+
+$$
+Net APY=
+
+(Total Collateral× Net~~Collateral APR)−(Total Debt× Net~~Debt APR)
+​/ (Total Collateral - Total Debt)
+$$
+
+#### In simpler terms:
+
+1. **Calculate earnings** on Collateral assets.
+2. **Subtract the cost** of your Debt assets.
+3. Divide that difference by your **net position** (Collateral - Debt).
+
+## Real Example
+
+Lets take the following USDe-USDT/USDC-USDT position which is earning you 98.71% Net APY.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F8tdD89gD68NQ4IfWqyn3%2Fimage45.png?alt=media&#x26;token=9548102c-1edc-4d48-bbb1-97c233946301" alt=""><figcaption></figcaption></figure>
+
+Step-by-step Calculation:
+
+$$
+Net APY=
+
+(11,269,893×11.18%)−(10,553,663×5.24%)
+​/ (11,269,893−10,553,663)
+$$
+
+1. **Earning:**
+
+$$
+11,269,893×11.18%=1,259,870.50
+$$
+
+2. **Cost of Borrowing:**
+
+$$
+10,553,663×5.24%=552,996.94
+$$
+
+3. **Net Position:**
+
+$$
+11,269,893−10,553,663=716,230
+$$
+
+4. **Net APY:**
+
+$$
+(1,259,870.50−552,996.94) / 716,230 =98.71%
+$$
+
+This confirms that the position is earning a positive return after accounting for borrowing costs.
+
+#### Tips for Interpreting Net APY
+
+**High Net APY (Positive) -** \
+You’re earning significantly more than you’re paying in interest, the position is performing well.
+
+**Low Net APY (Positive) -**\
+You’re earning slightly more than you’re paying. The return is modest, consider reviewing or optimizing your strategy.
+
+**Negative Net APY -**\
+Interest costs exceed your earnings. In simple words, you’re paying more in borrowing than you're earning from lending.
+
+#### Still Confused ?
+
+If you have questions or need clarification, feel free to join our [**Discord**](https://discord.com/invite/C76CeZc).\
+Our team is happy to assist you.
+
+
+
+# Vault Strategies
+
+**Vault Strategies** in fluid let you perform complex actions in one simple transaction.\
+You don’t need to do multiple steps like deposit, borrow, repay, or swap separately, strategies help you do it in one go with less effort.
+
+These are very helpful for users who want to **optimize their position, reduce risk**, or just save time.
+
+{% hint style="info" %}
+If you used [Instadapp Pro](https://defi.instadapp.io/) before you will find Fluid Strategies are the same as those found on Instadapp Pro!
+{% endhint %}
+
+## Where to Find These Strategies?
+
+When you open any vault in Fluid, scroll **down below your vault details,** you'll find a **"Strategies"** section like this -&#x20;
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2Fvt4PmSr16it5u6CjnYlI%2FV8.gif?alt=media&#x26;token=c685b5a3-dd70-412c-bbe6-0374f3957226" alt=""><figcaption></figcaption></figure>
+
+These strategies are personalized based on your vault type.
+
+## Strategies Overview
+
+### Compound Strategies -
+
+These strategies do not utilize a flashloan and can be combinations of different operations.
+
+1. **Warp < > Unwarp**&#x20;
+
+You can convert between regular assets and their wrapped versions (e.g, ETH to wETH). This is useful when some strategies or vaults require wrapped tokens. This is just a swap, it doesn’t affect your vault position.
+
+2. **Deposit & Borrow**
+
+This lets you deposit your asset into the vault and borrow another asset in a single click.\
+It’s useful when you want to quickly enter a borrowing position without doing two steps separately.
+
+3. **Payback & Withdraw**
+
+You can repay your loan and withdraw your deposited asset at the same time.\
+This is helpful when you want to exit your position completely or partially in one action.
+
+### Flashloan based Strategies -
+
+These strategies utilize flashloans to accomplish higher capital efficiency and allow users to accomplish more in one transaction.
+
+4. **Leverage**
+
+* Increase your position using borrowed funds.
+* This strategy uses a flashloan to borrow against your existing collateral and deposits it back, giving you more exposure to the asset.
+* *Best for users who want to maximize returns but also higher risk.*
+
+5. **Deleverage**
+
+* Reduce your debt using your own collateral.
+* It helps you unwind your position by selling part of your collateral and using that to repay debt.
+* *Great when markets are risky or if you want to reduce exposure.*
+
+### Vault Swap
+
+#### What is Vault Swap?
+
+Vault Swap lets you **switch your position from one vault to another** without needing to manually withdraw, repay, or create a new vault. It’s a smooth way to move your position across different asset pairs.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FQGN2vuWwubbwdAuqeQxN%2Fimage3.avif?alt=media&#x26;token=67355604-f407-4937-b6ec-3b9a035bec6e" alt=""><figcaption><p>Select your preferred Vault and simply swap your position from one vault to another</p></figcaption></figure>
+
+#### **Why Use Vault Swap?**
+
+* Easily migrate your positions
+* Avoid the need for manual withdraw & redeposit
+* Useful when changing strategies, assets, or optimizing returns
+
+## Strategy Panel <a href="#strategy-panel" id="strategy-panel"></a>
+
+When executing Strategies, you will find a few options to better control your strategy execiton.
+
+#### **Swap Routes**
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FwvMjAWgsI9VLsqwJpH2c%2Fimage4.avif?alt=media&#x26;token=005ba925-a76d-4bfb-8485-c7f257877750" alt=""><figcaption><p>Swap Providers Info</p></figcaption></figure>
+
+You may select the swap provider for your swap, but by default the UI will select the option with the best return.
+
+#### **Slippage**
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FgUv3vloIabthERX8bKiI%2Fimage5.avif?alt=media&#x26;token=4db02bf0-6a72-4786-ac90-afd73f20ce4a" alt=""><figcaption><p>Set your slippage tolerance to avoid unexpected results</p></figcaption></figure>
+
+This is the max % difference you're okay with in the swap price. Lower = safer but may fail if market moves.
+
+#### **Price Impact**
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FrVsqTQgxzzmZ0yK6sXfe%2Fimage6.avif?alt=media&#x26;token=cb6b4f92-bd17-40d2-a615-3d44dab97381" alt=""><figcaption><p>Check Price Impact here</p></figcaption></figure>
+
+Reflects the effect of your trade on the market price.
+
+
+
+# Leverage
+
+## What is Leverage? <a href="#what-is-leverage" id="what-is-leverage"></a>
+
+Leverage is the process of **borrowing more assets** using your deposited collateral in the vault. You’re increasing your exposure to a particular asset or position by using borrowed funds.
+
+It’s useful when:
+
+* You want to **maximize your exposure** to a yield-generating strategy.
+* You believe the asset's value will go up and want to **amplify potential gains**.
+
+#### **When Should You Use Leverage?**
+
+* You’re confident in the **future value** of your collateral asset.
+* You want to **maximize yield farming or staking rewards**.
+* You want to **increase capital efficiency** without selling your assets.
+
+## **How Leverage Works (Step-by-Step)** <a href="#how-leverage-works-step-by-step" id="how-leverage-works-step-by-step"></a>
+
+**1. Borrow Against Collateral**
+
+* You deposit collateral into a vault.
+* A portion of your borrowing limit is used to borrow a debt token.
+
+**2. Swap Debt Token into More Collateral**
+
+* The borrowed debt token is swapped for more of the same collateral asset.
+
+**3. Deposit Swapped Collateral Back Into Vault**
+
+* This newly acquired collateral is deposited back into the vault.
+* Your collateral increases, allowing for **more borrowing** and **higher exposure**.
+
+## **Understanding Leverage with Examples**
+
+> **Now that you know how leveraging works, let’s walk through some basic scenarios to understand different outcomes.**
+
+### **Case 1: You Borrow Small – Safe Leverage**
+
+You use a small portion of your borrowing power.
+
+* Only a little collateral is added from leverage.
+* Position remains safe with **low risk of liquidation**.
+* Useful when testing or gradually increasing exposure
+
+<div><figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FnZ3k7sLQGbexqSzFu72O%2Fimage7.webp?alt=media&#x26;token=918b2d4b-526b-4bea-a7e5-19bae4e56748" alt=""><figcaption><p>Before (Safe leverage)</p></figcaption></figure> <figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FKMqAVh0zLXr3HDPZbYgT%2Fimage8.webp?alt=media&#x26;token=7a01be59-3ac0-4b95-8aa7-a7bde02dec15" alt=""><figcaption><p>After (Safe leverage)</p></figcaption></figure></div>
+
+{% hint style="info" %}
+Great for gradually increasing exposure and yield while keeping your position safe.
+{% endhint %}
+
+### **Case 2: You Maximize Your Borrowing Limit**
+
+You borrow up to the maximum allowed.
+
+* Large amount of new collateral added.
+* High exposure and high risk.
+* If price drops, **vault may get liquidated**.
+
+<div><figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F4qxJZOUGT6IABShsKRvu%2Fimage9.webp?alt=media&#x26;token=1400e8fc-672a-4e15-a996-08e883d91efb" alt=""><figcaption><p>Before (Aggressive Leverage)</p></figcaption></figure> <figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FEOxYDYlssbed11jnd6bl%2Fimage10.webp?alt=media&#x26;token=bb599647-45a5-4d5c-a1ce-0fcaa8a220a7" alt=""><figcaption><p>After (Aggressive Leverage)</p></figcaption></figure></div>
+
+{% hint style="info" %}
+Great for experienced users aiming for high yield, but with high liquidation risk.
+{% endhint %}
+
+### **Case 3: You Use Leverage Multiple Times (Looped Leverage)**
+
+A way to increase your position size by repeating the process of borrowing and depositing.
+
+1. Deposit collateral into a vault.
+2. Borrow against your collateral.
+3. Swap the borrowed asset for more collateral.
+4. Deposit the new collateral back into the vault.
+5. Repeat the steps depending on your strategy and risk level.
+
+<div><figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FwYxJZLlAGaaOm4hbL3o1%2Fimage11.webp?alt=media&#x26;token=a13e5dcb-8ae8-48d6-b5fd-3c9d9eae4620" alt=""><figcaption><p>before (6x looped leverage)</p></figcaption></figure> <figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F5FDCXrh6ai205FJwqMUX%2Fimage12.webp?alt=media&#x26;token=ad0d8350-43bb-4e2f-b574-776ae2ca79c0" alt=""><figcaption><p>After (6x looped leverage)</p></figcaption></figure></div>
+
+{% hint style="info" %}
+Great for users who want to grow their position automatically by looping small borrows multiple times to earn more yield with controlled risk.
+{% endhint %}
+
+
+
+# Deleverage
+
+## What is Deleverage? <a href="#what-is-deleverage" id="what-is-deleverage"></a>
+
+Deleverage is the process of unwinding a leveraged position. If you’ve borrowed assets using your collateral (i.e. taken leverage), this strategy helps you reduce or fully repay that debt using the collateral you already have in your vault.
+
+It's useful when -
+
+* You want to exit your leverage position.
+* You want to lower your debt to make your position safer.
+
+**When Should You Use Deleverage?**
+
+* You want to **close your leveraged position**
+* You want to **reduce your debt** using the collateral
+* You want to **improve your Debt-to-Collateral (D/C) ratio**
+* You want to **safely exit** a risky position
+
+## **How Deleverage Works (Step-by-Step)** <a href="#how-deleverage-works-step-by-step" id="how-deleverage-works-step-by-step"></a>
+
+**1.  Withdraw Collateral**
+
+A portion of your deposited collateral is pulled out from the vault. This is the asset you'll use to repay part (or all) of your outstanding debt.
+
+**2.  Swap Collateral for Debt Token**
+
+The withdrawn collateral is swapped into the token you owe (your debt token).
+
+**3.  Repay Debt**
+
+The swapped tokens are used to reduce or eliminate your vault’s debt.
+
+## Understanding Deleverage with Examples
+
+> **Now that you know what deleveraging is and why it’s useful, let’s look at a few simple examples.** \
+> These will show how different collateral amounts can lead to different outcomes like, whether the debt is fully paid off, some debt remains, or excess collateral is returned.
+
+### **Case 1: You Deleverage but Still Have Some Debt Remaining**
+
+You deleverage partially. The position becomes safer, but some debt still remains.
+
+* A part of the collateral is withdrawn and swapped to repay part of the debt.
+* The vault still holds some remaining debt and collateral.
+* Your D/C ratio improves, reducing risk.
+
+<div><figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FlIZOx01xiSGsLMCT5Gel%2Fimage13.webp?alt=media&#x26;token=094b9a36-3aab-4a79-b442-a23fde03f39f" alt=""><figcaption><p>Before (Debt remaining)</p></figcaption></figure> <figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FRe2fXSiLDoYnZC87TAmd%2Fimage14.webp?alt=media&#x26;token=972f804f-0efe-4ff6-bd77-bbd9f2e2ed9f" alt=""><figcaption><p>After (Debt remaining)</p></figcaption></figure></div>
+
+{% hint style="info" %}
+Good when you want to lower risk but don’t want to repay the full debt.
+{% endhint %}
+
+### **Case 2 - You Fully Close Your Debt**
+
+You deleverage enough to repay **all** the outstanding debt.
+
+* Collateral is withdrawn and swapped exactly to repay the full debt.
+* After deleverage, your vault has zero debt.
+* Remaining collateral stays in the vault (can be withdrawn manually later).
+
+<div><figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FRTaF4IlnJPMfEElNfA8n%2Fimage15.webp?alt=media&#x26;token=88cfeb3a-652f-4c51-a455-b91f4c297ecf" alt=""><figcaption><p>Before (Zero Debt)</p></figcaption></figure> <figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FoUcgX6Rp0AoD6PfcZmQu%2Fimage16.webp?alt=media&#x26;token=daa092b5-92b8-437b-a75d-59378109582b" alt=""><figcaption><p>After (Zero Debt)</p></figcaption></figure></div>
+
+{% hint style="info" %}
+Ideal when you want to completely exit your loan safely.
+{% endhint %}
+
+### **Case 3: You Enter More Collateral Than Needed**
+
+You use **more** collateral than required to clear the debt.
+
+* Vault debt becomes zero.
+* Extra swapped tokens (now in the form of debt token) are returned to your wallet.
+* No debt or excess collateral remains in the vault.
+
+<div><figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FElZlsL5lWQnLUsCRmcTp%2Fimage17.webp?alt=media&#x26;token=73e5f596-8102-4d65-a58e-e30fe00a1bf5" alt=""><figcaption><p>Before (Excess Collateral)</p></figcaption></figure> <figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FNCQa34huRDUZAPGnkbaH%2Fimage18.webp?alt=media&#x26;token=cb026572-ee19-496d-9dec-b4ffc2fb2302" alt=""><figcaption><p>After (Excess Collateral)</p></figcaption></figure></div>
+
+{% hint style="info" %}
+Useful when you want to **exit the vault fully.**
+{% endhint %}
+
+
+
+# How a Liquidated Position Looks
+
+Liquidation happens when your vault becomes unsafe because your collateral is not enough to cover your borrowed amount.\
+To fix this, the system automatically sells part of your collateral to repay some debt and bring your vault back to a safe level.\
+This protects the system and prevents you from owing more than your collateral is worth.
+
+### How do I know if my position is liquidated?
+
+* When a position is liquidated, you’ll see a banner/notification at the bottom of your vault.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FZ9XDT4wi5F9CNcJQFukg%2Flp.png?alt=media&#x26;token=e0d6ca5e-d1b4-42d0-adcd-7e96e8b63c6f" alt=""><figcaption><p>Example of a liquidated position: part of your collateral sold to cover debt</p></figcaption></figure>
+
+* It will show the liquidation details:
+  * How much debt was repaid
+  * How much collateral was withdrawn
+
+### What happens when liquidation occurs?
+
+* A part of your collateral is sold to repay your debt.
+* This brings your position back to a **safe ratio** so it doesn’t remain at risk.
+* A small liquidation penalty is also charged (visible in your vault details).
+
+### What should I do after liquidation?
+
+* **Review your vault** → Check the updated collateral and debt values.
+* **Deposit more collateral** to reduce risk, or
+* **Pay back debt** to stabilize your position further.
+* Keep an eye on the **Liquidation Price** and **Ratio bar** to avoid future liquidations.
+
+{% hint style="info" %}
+Learn more about [Vault Liquidation](https://fluid.guides.instadapp.io/vault-protocol/advanced-liquidation-mechanism/vault-liquidation) on the Vault Protocol.
+{% endhint %}
+
+
+
+# Swap on Fluid
+
+## Feature Overview <a href="#feature-overview" id="feature-overview"></a>
+
+The **Swap** interface lets you:
+
+* Select the asset you want to sell.
+* Choose the asset you want to receive.
+* Automatically find and use the best available rate from multiple aggregators.
+* Customize slippage settings.
+* Review route and price impact before confirming.
+
+### When Should You Use Swap? <a href="#when-should-you-use-swap" id="when-should-you-use-swap"></a>
+
+* **Rebalancing collateral** (e.g. switching from sUSDe to wstETH)
+* **Repaying borrow** using another token
+* **Optimizing strategy** to chase higher yield assets
+
+## Step-by-Step Guide
+
+**1. Select Sell Asset**
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FxsmR7ABGhcEHJOgyJ2Mo%2Fimage22.webp?alt=media&#x26;token=2917dd62-2381-48e9-a114-c950d66b2b5e" alt=""><figcaption><p>Select Sell Asset</p></figcaption></figure>
+
+Choose the asset you wish to exchange from your wallet. Enter the amount you want to swap.
+
+**2. Select Buy Asset**
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FlLPdx9r2avM9M6zqBo1q%2Fimage23.webp?alt=media&#x26;token=2d62a4e8-0f81-48fb-b0ed-0a2e73c27fe9" alt=""><figcaption><p>Select buy Asset</p></figcaption></figure>
+
+Pick the asset you want to receive in return. The amount will auto-calculate based on the best available rate.
+
+**3. Best Route Selection**
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F6kqbiBHFpdJsuqr7iboH%2Fimage24.webp?alt=media&#x26;token=de9f703f-0ab2-4e13-8870-c5e35b203a36" alt=""><figcaption><p>Route Selection</p></figcaption></figure>
+
+Fluid automatically fetches quotes from multiple aggregators (e.g., Kyber, 0KX, 1inch, etc.) and selects the best rate for you.
+
+{% hint style="info" %}
+You can manually select a route if you prefer a specific aggregator.
+{% endhint %}
+
+**4. Review Key Info**
+
+* **Slippage Tolerance**: Set your preferred slippage percentage.
+* **Route Through**: Displays which aggregator is providing the rate.
+* **Price Impact**: Reflects the effect of your trade on the market price.
+
+**5. Approve & Confirm**
+
+Click **Swap** to execute the transaction.
+
+### Summary <a href="#summary" id="summary"></a>
+
+Swap on Fluid is designed to make asset management simple, fast, and cost-efficient. Whether you're rebalancing your portfolio, repaying borrow positions, or seeking better yields, our smart routing and aggregator support ensure you get the most value out of every trade.
+
+
+
+# Refinance on Fluid
+
+## What is Refinance? <a href="#what-is-refinance" id="what-is-refinance"></a>
+
+Refinancing allows you to **migrate your current lending or borrowing position** from another supported protocol directly into Fluid. This gives you access to Fluid’s optimized rates, automation, and unified asset management, without needing to manually close and re-open positions.
+
+#### Why Use Refinance? <a href="#why-use-refinance" id="why-use-refinance"></a>
+
+* Migrate positions in **one click**
+* Avoid manual repay/supply steps
+* Access **Fluid’s advanced tools**, better yields, and streamlined UX
+* Maintain your **better health ratio** and position size
+
+## How Refinance Works <a href="#how-refinance-works" id="how-refinance-works"></a>
+
+Fluid’s Refinance tool securely interacts with both the source protocol and the Fluid vaults to:
+
+1. Repay your borrowed position on the external protocol
+2. Withdraw your supplied collateral
+3. Transfer those assets into Fluid
+4. Re-create your position inside Fluid, preserving the same structure (loan amount, collateral ratio)
+
+All of this happens through a **single guided flow** within the Fluid interface.
+
+## Step-by-Step Guide <a href="#step-by-step-guide" id="step-by-step-guide"></a>
+
+Refinance your DeFi positions in a single flow using Fluid’s intuitive interface. Here's how to do it -
+
+#### **1. Connect Your Wallet**
+
+Head to the [**Refinance**](https://fluid.io/refinance/1) tab and connect the wallet that holds your DeFi position.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FSlKtXywRrpX3U1SEI7Xa%2Fimage1.avif?alt=media&#x26;token=4b75f52e-0372-4193-80a5-8f7368c478bf" alt=""><figcaption><p>Connect with your Wallet Provider</p></figcaption></figure>
+
+#### **2. Select a Position to Refinance**
+
+Once you're connected:
+
+* Ensure you're on the correct network using the network selector in the UI.
+* Fluid will detect eligible positions from supported protocols, currently including:
+  * **Aave**
+  * **Compound**
+  * **MakerDAO**
+  * **Uniswap V3**
+  * **Curve**
+* If Fluid identifies any active positions from these protocols, you’ll see them listed as available for refinance.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FCMcMw98gqXVGeX4eGuRV%2Fimage25.avif?alt=media&#x26;token=fe5a0c80-63ce-41ac-aff6-173275757111" alt=""><figcaption><p>Your open position will display here</p></figcaption></figure>
+
+#### **3. Preview the Refinance**
+
+Click on a position to view a side-by-side comparison between:
+
+* Your current external position (e.g., on Aave)
+* The new equivalent position that will be created in Fluid
+
+<div><figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FMGZraPTkaRnUjuA2y6tf%2Fimage26.avif?alt=media&#x26;token=0b26518b-cee1-4157-91c3-9feabb6afc4c" alt=""><figcaption><p>Before Refinance</p></figcaption></figure> <figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F269jbpyk63fTUG7mNZo3%2Fimage27.avif?alt=media&#x26;token=482234c3-c4dd-48f3-a5e7-2d2085ded83d" alt=""><figcaption><p>After Refinance</p></figcaption></figure></div>
+
+#### **4. Confirm & Execute**
+
+Once satisfied, approve the transaction from your wallet and click **Refinance**. Fluid will handle all underlying steps:
+
+* Repay borrow
+* Withdraw collateral
+* Migrate position to Fluid
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FJ1vd7CixoR0vk5JYPSGJ%2Fimage28.avif?alt=media&#x26;token=f9084b03-a6f5-4b0a-9a6e-96964d653569" alt=""><figcaption><p>Seamless refinancing, transfer your position with just one click</p></figcaption></figure>
+
+#### **5. Completion: View Your Position**
+
+Your position is now fully migrated to Fluid. You can manage it from the **Borrow** dashboard.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FPJDSt6kRjKKko1jjenrO%2Fimage29.avif?alt=media&#x26;token=27d151ea-2389-4618-a53c-726af3cd7b31" alt=""><figcaption><p>Track and manage your position easily</p></figcaption></figure>
+
+All set! 🎉 Your position is now migrated on Fluid.
+
+### Need Help? <a href="#need-help" id="need-help"></a>
+
+If you have questions or need clarification, feel free to join our [**Discord**](https://discord.com/invite/C76CeZc). Our team is happy to assist you.
+
+
+
+# Migrate positions from Fluid
+
+If you’ve refinanced into Fluid and now want to manage your position elsewhere, this guide is for you.
+
+With the introduction of 1-click refinancing into Fluid, we made DeFi simpler and more accessible. But it’s not a one-way street, you can also migrate your positions out of Fluid and back into your **DeFi Smart Account (DSA)** on Instadapp Pro with just a single click.
+
+{% hint style="info" %}
+Checkout the [quick start primer](https://guides.instadapp.io/walkthroughs/quick-start-primer) if you are new to Instadapp Pro
+{% endhint %}
+
+## Quick Overview <a href="#quick-overview" id="quick-overview"></a>
+
+* Migrate your position from Fluid to Instadapp Pro
+* No complex steps, just 1-click import
+* Supports position management across multiple protocols and chains via DSA
+
+## How to migrate your position?
+
+### 1. Create Your DSA (If Not Already Created) <a href="#id-1.-create-your-dsa-if-not-already-created" id="id-1.-create-your-dsa-if-not-already-created"></a>
+
+To begin, you’ll need a **DeFi Smart Account (DSA)** on Instadapp Pro.
+
+**Here’s how to create one:**
+
+1. Visit [defi.instadapp.io](https://defi.instadapp.io/)
+2. Connect your wallet (ensure it’s the same wallet holding your Fluid position)
+3. Click **"Create Account"** on the top navigation
+4. A panel will open on the right, click **"Create DSA Account"**
+5. Sign the transaction in your wallet
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FeOwBmLZtRFfig8b29QVv%2FV8.gif?alt=media&#x26;token=b9702433-d67a-4bf2-85e7-4b9b3dc4b0f2" alt=""><figcaption></figcaption></figure>
+
+Done! 🎉 Your DSA is now created and ready.
+
+### 2. Import Your Fluid Position <a href="#id-2.-import-your-fluid-position" id="id-2.-import-your-fluid-position"></a>
+
+Once your DSA is set up, importing your position from Fluid is just as simple.
+
+**Here’s how:**
+
+1. In the left sidebar, go to the **Utilities** section
+2. Click **"Import Positions"**
+3. You’ll see all Fluid positions tied to your connected wallet
+4. Select the position you want to migrate
+5. Click **"Import to DSA" -** done in a single transaction
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FQ7gwdakax1GWsvYFQaab%2Fimage20.webp?alt=media&#x26;token=4217bd65-db08-4039-88bc-33fb50f661c0" alt=""><figcaption><p>Import your position to DSA in single transaction</p></figcaption></figure>
+
+Your position is now live in your Instadapp Pro account
+
+## What’s Next? <a href="#whats-next" id="whats-next"></a>
+
+With your position back in DSA, you now have access to advanced DeFi features -
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FBlYEQmYk1axEC6DKHIoz%2Fimage21.webp?alt=media&#x26;token=08604e30-970f-49ad-92a6-e71d09f0296a" alt=""><figcaption><p>Refinance your position to any supported protocol</p></figcaption></figure>
+
+1. Refinance your position to any supported protocol
+2. Swap tokens directly within the dashboard
+3. Manage positions across multiple protocols and chains
+4. Use **Avocado Wallet** for gas abstraction and cross-chain operations
+
+### Tips -  <a href="#tips" id="tips"></a>
+
+* Ensure your wallet is connected to the correct network
+* Always verify that the selected position matches your intended import
+* You can still refinance again later, now from within Instadapp Pro
+
+### Need Help? <a href="#need-help" id="need-help"></a>
+
+If you have questions or need clarification, feel free to join our [**Discord**](https://discord.com/invite/C76CeZc). Our team is happy to assist you
+
+
+
+
+# Fluid Statistics
+
+The [**Stats**](https://fluid.io/stats/1/liquidity) tab in Fluid gives you a full overview of everything happening in the protocol, like how much liquidity is available, how much is being lent or borrowed, what’s happening in the vaults, trading activity on the DEX, and smart lending performance.
+
+Here’s a simple breakdown of each section to help you understand what you’re looking at.
+
+## Overview: Fluid Statistics Summary <a href="#overview-fluid-statistics-summary" id="overview-fluid-statistics-summary"></a>
+
+This is the **top-level protocol summary** showing -
+
+* **Total Market Size**: The total amount of assets supplied by users, along with the amount borrowed, representing the full liquidity flowing through the protocol.
+* **Total Available**: Total assets supplied and available to be borrowed.
+* **Total Borrowed**: Total amount of assets currently borrowed by users.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2Fxw4bql48A5NprmGvxdwP%2Fimage30.avif?alt=media&#x26;token=2d97aa10-570f-41f5-b22c-45edce2ad8b5" alt=""><figcaption><p>Fluid Stats overview</p></figcaption></figure>
+
+### 1. Liquidity <a href="#id-1.-liquidity" id="id-1.-liquidity"></a>
+
+This section highlights asset-level details related to liquidity provisioning -
+
+* **TVL (Total Value Locked)**: The total value of assets locked in the protocol (total supplied - total debt)
+* **Supplied**: Total amount of each asset supplied by liquidity providers.
+* **Borrowed**: Total amount of that asset borrowed.
+* **Supply APR**: Annual interest rate earned by users who supply assets to the protocol.
+* **Borrow APR**: Interest rate paid by borrowers.
+* **Reserves:** Portion of interest kept by the protocol.
+* **Reserve Factor:** The percentage of interest set aside as reserves.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FPPLz0tBBIyZdtkp4dNYV%2Fimage31.avif?alt=media&#x26;token=78c5442c-975e-4f33-b636-284431f3d6fe" alt=""><figcaption><p>Total liquidity and usage per asset</p></figcaption></figure>
+
+### 2. Vaults <a href="#id-2.-vaults" id="id-2.-vaults"></a>
+
+The **Vaults tab** gives a complete view of your looped/leveraged positions in the protocol.
+
+At the top, you’ll see high-level stats showing:
+
+* **Total Supply**: The total collateral deposited across all vaults.
+* **Total Borrow**: The total amount borrowed using a vault’s collateral asset.
+* **Total Positions**: The total number of active vault positions.
+
+#### **i) Tokens View -**
+
+By default, you land in the vault select card view, where each vault pool is listed by its **collateral/debt pair** (e.g, ETH/USDC, wstETH/USDT).
+
+Each vault card shows:
+
+* **TVL (Total Value Locked)** – The total value of asset currently locked in the vault (Total Collateral) - Total Debt).
+* **Collateral Factor** – Max % of collateral value that can be borrowed
+* **Liquidation Threshold** – The ratio at which your vault becomes uncollateralized and may be liquidated to repay the debt.
+* **Liquidation Penalty** – An extra amount taken from your collateral during liquidation, given as a reward to the liquidator for repaying your debt.
+* **Liquidation Max Limit** – LML is the threshold above which your entire position gets liquidated instantly.
+* **Total Positions** – Number of NFTs created in a particular vault, representing all active user positions.
+* **Immediate Withdrawable** – The amount of liquidity that users can withdraw instantly in a single transaction, after which the expand rate and duration will apply, limiting further withdrawals.
+* **Immediate Borrowable** – Liquidity currently available to borrow
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FNTSqrsKNzAiGZgHi5xCZ%2Fimage32.avif?alt=media&#x26;token=b71b2300-067b-41e8-9deb-780664ae47a2" alt=""><figcaption><p>Overview of every active vault</p></figcaption></figure>
+
+{% hint style="info" %}
+[Click here](https://fluid.guides.instadapp.io/vault-protocol/protocol-details#position-parameters) to explore detailed explanations of key Vault parameters.
+{% endhint %}
+
+#### **ii) Position View -**
+
+Switching to the **Position View** (via the Filter toggle) reveals a table listing individual user NFTs.
+
+For each position, you’ll see:
+
+* **Position ID -** Click to open the specific NFT and view its position details.
+* **Collateral/Debt Pair -** The asset pair used in the position.
+* **Owner Wallet Address -** Wallet address holding the position (click to track the user’s position or NFT details).
+* **Collateral Ratio** – Percentage of borrowed value vs supplied collateral
+* **Supplied & Borrowed Amounts**
+* **Liquidated** – Indicates if the position is in a safe range or has been liquidated.
+* **Health Facto**r – Shows the position’s risk level. Higher is safer; below 1 risks liquidation. Monitor it regularly to avoid losing your collateral.
+
+$$
+Health\~ Factor = Collateral~~Value~~\*\~ Liquidation~~Threshold~~/~~Debt~~Value
+$$
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FxXGEBr0gxppzvumlTL3e%2Fimage33.avif?alt=media&#x26;token=92fd76dd-f748-459a-9122-7738ac65609c" alt=""><figcaption><p>Track open positions across the vault</p></figcaption></figure>
+
+{% hint style="info" %}
+Use filters to sort by asset pairs, stable vaults, liquidation status, or smart strategies like *Smart Debt* or *Smart Collateral*.
+{% endhint %}
+
+### 3. Lending - <a href="#id-3.-lending" id="id-3.-lending"></a>
+
+This section shows insights into direct lending pools -
+
+* **TVL**: Total value in the lending pool for that token
+* **Current APY**: Real-time annual yield that lenders earn
+* **Withdrawable**: Amount that can be withdrawn instantly by users
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FJVvBwwHkeZUfHesVW0pR%2Fimage34.avif?alt=media&#x26;token=292cb18b-58c3-48aa-a3c3-850478cad112" alt=""><figcaption><p>Lending performance across supported tokens</p></figcaption></figure>
+
+### 4. DEX <a href="#id-4.-dex" id="id-4.-dex"></a>
+
+This dashboard shows trading activity on Fluid’s integrated DEX -
+
+* **Supply**: The total value of assets currently deposited in the DEX pools.
+* **Borrow**: Amount being borrowed via DEX liquidity.
+* **7D Volume**: Total trading volume over the last 7 days.
+* **7D Fee**: Total fees generated over 7 days.
+* **7D Trades**: Number of trades executed in the past week.
+
+Each listed pair displays key metrics, sortable and filterable via UI -
+
+* **Effective Reserves**: Liquidity actively available for trading in the pool.
+* **Status Tags**: Indicators such as "Available", "Filled" or "Almost Filled" to Show reserve levels and available space in the DEX pool.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FjbfZSh3Pxw26Fi2Mo84m%2Fimage35.avif?alt=media&#x26;token=1d60411b-6ecb-43e7-a841-99a87acea97d" alt=""><figcaption><p>Performance stats for all DEX pairs</p></figcaption></figure>
+
+{% hint style="info" %}
+[Click here](https://fluid.guides.instadapp.io/dex-protocol/protocol-details) to explore detailed explanations of key Dex parameters.
+{% endhint %}
+
+### 5. Smart Lending <a href="#id-5.-smart-lending" id="id-5.-smart-lending"></a>
+
+Smart Lending is similar to Smart Collateral except that in this case, you can't borrow off these vaults.\
+Instead, you just relax and earn that boosted yield!
+
+* **Total Lending** – The total amount currently lent in that asset.
+* **Immediate Withdrawable Amounts** – How much can be withdrawn instantly.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FmMAY155jExeXi7euDB2m%2Fimage36.avif?alt=media&#x26;token=6b4f426f-0706-49f6-83c9-c1407c50d83c" alt=""><figcaption><p>Overview of Smart Lending Stats</p></figcaption></figure>
+
+
+
+# Multiply on Fluid
+
+## What is Multiply? <a href="#what-is-multiply" id="what-is-multiply"></a>
+
+Multiply gives you an easy way to increase exposure and earn higher yields. When you open a position, the protocol borrows against your collateral and cycles it back into the same asset until your chosen leverage level is reached.
+
+#### Why Use Multiply? <a href="#why-use-multiply" id="why-use-multiply"></a>
+
+* Boost exposure with minimal upfront capital
+* Grow wealth with long-term exposure
+* Access leverage without complex setup
+* Accrue rewards while maintaining leveraged positions
+
+### How Multiply Works (Behind the Scenes) <a href="#how-multiply-works-behind-the-scenes" id="how-multiply-works-behind-the-scenes"></a>
+
+Here’s a simple breakdown of what happens when you use Multiply:
+
+1. **Deposit**: You start with a selected amount of an asset.
+2. **Protocol borrows**: It borrows the paired asset against your deposit
+3. **Auto-swap**: The borrowed asset is swapped back into more of your collateral asset.
+4. **Redeposit:** The swapped collateral is deposited back to increase your position.
+5. **Loops**: This cycle is repeated until your target leverage is achieved.
+6. **Final result**: You end up with a larger position and a corresponding debt - all handled automatically.
+
+## Step-by-Step Guide: How to Multiply Your Position <a href="#step-by-step-guide-how-to-multiply-your-position" id="step-by-step-guide-how-to-multiply-your-position"></a>
+
+Multiply lets you grow your position faster without extra steps. Here’s how to get started -
+
+### **1. Connect Your Wallet**
+
+Go to the [Multiply](https://fluid.io/multiply/1) tab and connect your wallet.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FSlKtXywRrpX3U1SEI7Xa%2Fimage1.avif?alt=media&#x26;token=4b75f52e-0372-4193-80a5-8f7368c478bf" alt=""><figcaption><p>Connect with your Wallet Provider</p></figcaption></figure>
+
+### **2. Choose Your Position or Pair**
+
+Pick the asset pair you want to multiply (e.g., sUSDe/GHO, rsETH-ETH/wstETH, ezETH-ETH/wstETH etc).
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F4uJoYbwDIuEQO7KfrFCz%2Fimage37.avif?alt=media&#x26;token=3b3227b1-d35e-43cb-98d9-28cf5469b52a" alt=""><figcaption><p>Pick the asset pair you want to multiply</p></figcaption></figure>
+
+### **3. Enter Deposit Amount & Choose Multiplier**
+
+Input how much of the asset you want to deposit.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F08PmaFhyTaT8SnYFNht0%2Fimage38.avif?alt=media&#x26;token=4fc77703-1bfc-4efb-9bcd-1d9d2c70645f" alt=""><figcaption><p>Deposit the amount you want to multiply</p></figcaption></figure>
+
+Use the slider to select your desired Multiplier.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FdG6K8NT1ZZhzufZsuS8S%2Fimage39.avif?alt=media&#x26;token=a2f48c02-c8ea-4887-8cde-e3b1c4865c4c" alt=""><figcaption><p>Set the % to select your desired leverage</p></figcaption></figure>
+
+### **4. Review the Overview Section**
+
+Before proceeding, check the overview -
+
+* Final APY
+* Max Leverage APY
+* Collateral Factor (CF)
+* Liquidation Threshold (LT)
+* Supply APR & Borrow APR
+* Immediate Borrowable
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FVMNCOUVC7tKw9gYON0DU%2Fimage40.avif?alt=media&#x26;token=baaf4588-4b4f-455e-b5cb-176785c19607" alt=""><figcaption><p>Review Overview section for the detailed Info</p></figcaption></figure>
+
+### **5. Click Multiply**
+
+Once you're satisfied, click **Multiply**.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2Fp5Da89t47Pn0gecVGaG4%2Fimage41.avif?alt=media&#x26;token=82149bd0-cbd9-4303-92f9-b0cb76a5af36" alt=""><figcaption><p>Once you are satisfied with the overview then click on the Multiply</p></figcaption></figure>
+
+**Done! Position Created 🎉**
+
+Fluid handles the entire loop behind the scenes. You can monitor or adjust your leveraged position directly in the [Multiply](https://fluid.io/multiply/1) tab or from [Borrow](https://fluid.io/dashboard/1) tab.
+
+## Deleverage: How to Reduce Risk or Exit a Position <a href="#deleverage-how-to-reduce-risk-or-exit-a-position" id="deleverage-how-to-reduce-risk-or-exit-a-position"></a>
+
+When you deleverage, you use part of your collateral asset to repay the borrowed asset, letting you reduce your position size, lower risk, or close your debt position in just one click.\
+\
+Here’s how you can use the deleverage feature -
+
+#### 1. Use the Deleverage Feature on Multiply Tab <a href="#option-1-use-the-deleverage-feature" id="option-1-use-the-deleverage-feature"></a>
+
+1\) Go to the **Deleverage** tab&#x20;
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FKk8niEKziLnrdI0SBj0J%2Fimage46.png?alt=media&#x26;token=d6256b75-c0f7-4f0f-b699-6487cf54c021" alt=""><figcaption><p>Click here to deleverage your position</p></figcaption></figure>
+
+2\) On the Slider Choose how much percentage you want to reduce
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FtjF8wLNOYeh2rRPAa2iO%2Fimage47.png?alt=media&#x26;token=e5f3bb0c-9c0b-42de-aaec-b2a40049ef3c" alt=""><figcaption><p>Move the slider to select deleverage percentage</p></figcaption></figure>
+
+3\) Confirm the transaction
+
+* Fluid will automatically sell a portion of your collateral to repay the debt.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FPXYo4gfdfGGh0hDHgsnx%2Fimage48.png?alt=media&#x26;token=bc0b42ab-1a3b-4eab-8dab-5375cb46a9e6" alt=""><figcaption><p>Repay your debt instantly with a single click</p></figcaption></figure>
+
+### Need Help? <a href="#need-help" id="need-help"></a>
+
+If you have questions or need clarification, feel free to join our [**Discord**](https://discord.com/invite/C76CeZc). Our team is happy to assist you.
+
+
+
+# Smart Lending
+
+## What is Smart Lending? <a href="#what-is-smart-lending" id="what-is-smart-lending"></a>
+
+**Smart Lending** is Fluid’s simple “deposit-and-earn” feature powered by the unified Liquidity Layer. You deposit assets into this lending-only vault, and it generates yield, without borrowing or complex strategies. Fluid handles everything in the background, giving you a seamless way to earn returns.
+
+You earn from:
+
+* **Liquidity APR** – rewards from lending your assets.
+* **Trading APR** – rewards from trading activity.
+* **Incentive Rewards** – additional rewards from Fluid’s partners and collaborators.
+
+## How It Works (Step-by-Step) <a href="#how-it-works-step-by-step" id="how-it-works-step-by-step"></a>
+
+### 1. Visit the Smart Lending Page <a href="#id-1.-visit-the-smart-lending-page" id="id-1.-visit-the-smart-lending-page"></a>
+
+Go to [**Smart Lending**](https://fluid.io/smart-lending/1) tab.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FDFU6Rfudx9LM0ZWPjvyS%2Fimage42.avif?alt=media&#x26;token=032aabad-52eb-433a-b8ab-02d2aa05c342" alt=""><figcaption></figcaption></figure>
+
+You’ll see a list of vaults available for you to deposit into.
+
+### 2. Browse the Available Vaults <a href="#id-2.-browse-the-available-vaults" id="id-2.-browse-the-available-vaults"></a>
+
+When you hover over the **Net APR**, you’ll see a full breakdown -
+
+* **Liquidity APR** → For supplying tokens
+* **Trading APR** → Yield from trading activity
+* **Staking APR** → Earn Staking APR for the specific asset
+* **Points/Rewards (e.g, 30x)** → Boosted rewards if the vault is active
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FLEwfnNvg1XuOCONjtQ9N%2Fimage43.avif?alt=media&#x26;token=b36f3ca0-16f8-475c-b974-efa5745b3d48" alt=""><figcaption><p>Hover over the Net APR to see the rewards breakdown</p></figcaption></figure>
+
+{% hint style="info" %}
+**APR(Annual Percentage Rate)** = simple, non-compounded rate.\
+**APY(Annual Percentage Yield)** = actual returns if rewards are reinvested.
+{% endhint %}
+
+### 3. Click “Earn” to Open Deposit Window <a href="#id-3.-click-earn-to-open-deposit-window" id="id-3.-click-earn-to-open-deposit-window"></a>
+
+This opens the deposit modal with details like:
+
+* Current APR
+* Vault supply stats (Current & Max)
+* Option to select:
+  * **Variable Proportion** (flexible deposits)
+  * **Fixed Proportion** (equal ratio)
+* Slippage control (default is safe)
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FGPHSn2ZoijD8r7zpj5P3%2Fimage44.avif?alt=media&#x26;token=fd55a9d9-4232-4c4f-bedf-63993b98751a" alt=""><figcaption></figcaption></figure>
+
+### 4. Enter Amount & Deposit <a href="#id-4.-enter-amount-and-deposit" id="id-4.-enter-amount-and-deposit"></a>
+
+* Choose how much to deposit (one or both tokens)
+* Click **Deposit**
+* Confirm the transaction in your wallet.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F8fPBzp8H4DFbaQEbvCck%2FV10.gif?alt=media&#x26;token=09ed4305-5261-42c7-8f8d-5eb171c8b327" alt=""><figcaption></figcaption></figure>
+
+You're now earning, rewards auto-start and are managed by the protocol.
+
+## **Want to withdraw your position?** <a href="#want-to-withdraw-your-position" id="want-to-withdraw-your-position"></a>
+
+You can easily take your funds back anytime in just a few clicks -
+
+1. Open the same vault
+2. Click the **“Withdraw”** tab at the top
+3. Enter the amount you want to take out
+4. Click **Withdraw** and approve in your wallet
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FQXzZ6efTNnLCVfxuHSrZ%2Fimage45.avif?alt=media&#x26;token=a6d6cb49-ca51-4e34-bb54-9dad3c2dd5f8" alt=""><figcaption></figcaption></figure>
+
+Your tokens will return to your wallet instantly.
+
+
+
+# Unifying Liquidity
+
+The Liquidity Layer serves as the foundation of Fluid upon which various protocols can be built. It acts as a singular layer that consolidates liquidity across protocols built on Fluid, eliminating the need for each protocol to independently attract liquidity.
+
+This layer enables seamless interaction between various protocols while ensuring optimal capital efficiency, security, and user experience.
+
+#### **Key Features:**
+
+1. **Capital Efficiency:** By serving as the hub for liquidity aggregation and management,  Liquidity Layer minimizes capital fragmentation and maximizes the potential for liquidity utilization across protocols, ultimately driving greater value for users.
+2. **Automated Ceilings:** Liquidity Layer introduce dynamically adjusting debt/collateral ceilings to prevent sudden whale movements and securing the protocol against potential exploits\
+   These limits adjust in real-time based on utilization rates, exposing minimum potential losses.
+3. **Most Advanced Liquidation:** Fluid boasts the most advanced liquidation mechanisms, with penalties as low as 0.1%. Advanced 'slot based' liquidation enables the most gas efficient method for liquidating up to thousands of positions. The gas costs are so low that even traders can indirectly liquidate positions at no cost.
+4. **Highest LTVs for Assets:** Fluid advancements in liquidations and utilization, enable the protocol to offer the highest LTV in the market up to 95% LTV on assets like ETH
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FPbMnhvjTuF3MAldTAKF8%2FMain-Animation.gif?alt=media&#x26;token=023c5e7c-6b10-40e3-a82f-0ba1b5fe9821" alt=""><figcaption><p>A world of protocols can access the Liquidity Layer</p></figcaption></figure>
+
+
+
+# Protocols on Fluid
+
+The Liquidity Layer enables building innovative protocols on top of Fluid that can leverage the unified liquidity layer.
+
+* New protocols can be easily plugged into the layer to provide new features and functionalities
+* Automated limits restrict large movement of assets to secure protocol funds
+* Flexible to support diverse protocol designs and risk models on top
+
+Currently Fluid is planned to have few primary protocols which are bound to increase in future:
+
+* [**Lending Protocol**](https://fluid.guides.instadapp.io/lending-protocol/lending-on-fluid) - A super simple Lend and Earn protocol for users to get long term sustainable yields&#x20;
+* [**Vault Protocol**](https://fluid.guides.instadapp.io/vault-protocol)  - An advanced and efficient borrowing protocol that  provides users with high LTV and lowest liquidation penalties
+* **Dex Protocol** - An innovative protocol with a single dynamic range order and smart utilisation of Debt and Collateral as liquidity.
+
+
+
+# Risks
+
+Fluid is a cutting-edge lending protocol designed with robust security measures to offer a secure and efficient experience for users. However, it's crucial for all users to understand the risks associated with lending protocols like Fluid. By using the platform, you assume all risks, including potential loss of funds. Fluid shares many similar risks with established protocols like AAVE and Compound but includes several advancements that enhance and makes it more secure than previous protocols.
+
+## What Makes Fluid More Secure?
+
+**Automated Limits:** Fluid employs Automated Limits that expand continuously per block, restricting the maximum withdrawal and borrowing within any 12-hour period. This mechanism, known as Expand Percentage, is available on the Stats page. Automated Limits protect the protocol from sudden black swan events, making it highly unlikely for all liquidity to exit Fluid in a short period. For instance, it would take approximately four days for all liquidity to exit.
+
+**Simple Liquidity Layer:** The core of Fluid is a simple liquidity contract, the Liquidity Layer. This layer ensures all Fluid liquidity is maintained in a straightforward contract, does not involve end-user borrowing functions, and minimizing attack surfaces.
+
+**Efficient Liquidation Mechanism:** Fluid's advanced liquidation mechanism ensures the cheapest and most gas efficient liquidations. Thousands of positions can be liquidated in one transaction, allowing the protocol to liquidate debt quickly and effectively. This efficiency enables Fluid to offer higher Loan-to-Value (LTV) ratios for user assets.
+
+**Advanced Oracle System:** Fluid uses a combination of Uniswap and Chainlink oracles for accurate and reliable pricing data, reducing the risk of price manipulation. A recent update enables multi-use oracles for different operations, adding extra security measures.
+
+## Risk Considerations
+
+### Smart Contract Bugs
+
+Fluid has been audited by [Statemind](https://github.com/statemindio/public-audits/blob/main/Instadapp/2023-12-29_Instadapp_Fluid.pdf) and **Mixbytes**, but unforeseen bugs or errors may occur, potentially causing users to lose funds or face issues interacting with the protocol. Fluid encourages community involvement and offers a $500k bug bounty through Immunefi to identify and mitigate these risks.
+
+{% embed url="<https://immunefi.com/bug-bounty/instadapp/>" %}
+Click here to view our 500k Bug Bounty!
+{% endembed %}
+
+### Price Oracles
+
+Fluid utilizes multiple price oracles, including Chainlink and Uniswap TWAP (Time Weighted Average Price) checks, to verify prices during transactions. This dual-check system minimizes the risk of price manipulation, ensuring more reliable and secure operations.
+
+#### Chainlink Price Oracles with Uniswap TWAP Checks&#x20;
+
+Protocols such as the Vaults protocol can utilize multiple oracles like Chainlink and Uniswap and do utilize them in combination to protect users and the protocol from bad debt.
+
+1. Pulls on chain Uniswap TWAP price (on-chain price)
+2. Checks this price against the Chainlink (difference check)
+3. If the TWAP is within parameters it will use on-chain otherwise it will use the Chainlink price. (determines oracle to utilize)
+
+In essence, this means the uniV3 price (on-chain pricing) will be utilized in most cases. However, if there is a significant market fluctuation, we will revert to using the Chainlink price. Our goal is to ensure that liquidations on the Vault protocol can occur whenever necessary, relying on the most accurate information available. This approach safeguards the protocol from incurring bad debt.
+
+#### Contract Pricing
+
+Certain Vaults within the Vaults protocol, such as weETH/wstETH, employ enhanced security measures through contract pricing to prevent user liquidations during short-term price depegs. By querying the backing contract for assets, we can verify that they are fully backed, ensuring accurate asset pricing even with low on-chain liquidity. This approach effectively prevents baseless liquidations due to temporary price fluctuations. Contract pricing in Fluid has some similarities to Fundamental Pricing on AAVE, providing a robust mechanism to maintain stability.
+
+### Liquidity and Automated Limits
+
+Fluid's innovative Automated Limits system ensures a secure and stable environment for users by continuously adjusting per block to restrict maximum withdrawals and borrowing within any 12-hour period. This dynamic mechanism, known as Expand Percentage, is prominently featured on the Stats page, providing transparency and confidence to users. By preventing the sudden removal of large amounts of funds, Automated Limits safeguard against black swan events and ensure that it would take approximately four days for all liquidity to exit the protocol. This design allows the protocol to unwind safely within five days, maintaining stability while still accommodating user needs effectively.
+
+### Undercollaterized fToken
+
+As a liquidity layer, all protocols built on Fluid draw liquidity from the same pool. Excessive access to liquidity or significant asset devaluation can affect the liquidity layer, causing depositors to become under-collateralized. This is managed by governance and how much each protocol can tap into the liquidity layer, if an asset becomes undercollaterized or an asset is frozen it may impacts all asset holders until the specific vault or protocol's debt is neutralized, returning the fToken to parity.
+
+### Liquidation Risks
+
+Liquidations on Fluid operate neutrally, allowing anyone to execute and call liquidations. Vaults can be liquidated via an indirect swap, buying the debt at a slight discount while liquidating the position in the process. Liquidations require accurate price oracles and sufficient on-chain liquidity and are actively monitored by the team. Delayed liquidations can exacerbate losses. Fluid employs a two-tier liquidation system:
+
+1. **Liquidation Threshold:** This is the point at which a position becomes eligible for liquidation.&#x20;
+2. **Max Liquidation Threshold:** This is a higher threshold at which the entire 100% of the position can be liquidated to repay outstanding debt.
+
+### Oracle Usage Risks
+
+Oracles are a crucial point of DeFi infrastructure. If an oracle reports incorrect data, it may cause liquidations or incorrect protocol operations, resulting in bad debt and loss of user funds. Fluid can utilize a variety of oracles and can specify oracles for different operations ensuring the protocol can mitigate risk while serving users.&#x20;
+
+### Interface Web UI
+
+Fluid is a collection of smart contracts deployed on the Ethereum network, accessible through multiple UIs. Users must ensure their computers and browsers are secure to avoid hacks. Malicious actors can spoof or scam users, leading to potential loss of funds.
+
+### Governance and DAO Risks
+
+Fluid's governance involves DAO decisions that affect protocol operations and risk management. Proper alignment and management are crucial to maintaining protocol stability and user satisfaction.
+
+### **Phishing and Hacks**&#x20;
+
+Fluid implements security measures against breaches, including hacks and cyber-attacks. Users must also take precautions to secure their assets and interactions with the protocol.
+
+### **Individual Asset Risk**&#x20;
+
+Fluid onboards various assets, each with different risks. For example, weETH is available as collateral but not for borrowing. Users must understand the risks associated with each asset, including pricing methodologies and oracle use.
+
+### **LRTs and Stablecoins**&#x20;
+
+Liquid Restaking Tokens (LRTs) and stablecoins like USDC and USDT have specific risks. Users must rely on providers for restaking and be aware of centralized institutions' potential actions that could affect Fluid.
+
+***By using Fluid, you acknowledge and accept these risks. It is crucial to stay informed and exercise caution when interacting with the protocol.***
+
+
+
+# Lending on Fluid
+
+### **What is the Lend Protocol**
+
+The Lend Protocol within the Fluid ecosystem is a foundational component designed to facilitate lending activities with high efficiency and security. You can think of it as the '***Deposit and Earn***' of Fluid. The lend protocol is your direct access into Fluid's Liquidity Layer.
+
+#### Features of the Lend Protocol
+
+* **High Capital Efficiency**: The Lend protocol supplies capital to the liquidity layer which is then in turn utilized efficiently across the entire Fluid ecosystem.&#x20;
+* **Simplified User Experience**: The Lend protocol serves one function and removes the complexities associated with mult-use interfaces. Instead focusing on providing a user-friendly interface for depositors.&#x20;
+* **Long-term Yield Opportunities**: Depositors benefit from long-term safe yield opportunities, as the protocol is designed to adapt to advancements on the borrowing side without necessitating asset relocation. Deposit once and reap the benefits of advacnements on the borrowing side.
+* **ERC 4626 Compliant Vaults:** Fluid Earn Deposits are ERC-4626 complaint making them easy to integrate and provides ease for protfolio managers to integrate the Lend Protocol.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FlRzdQthYLOkiQzqmAfUw%2F3.Lending%20Protocol.gif?alt=media&#x26;token=b9fce921-59dd-4f6d-b46c-72052daa0970" alt=""><figcaption><p>The Assets in the Lending Protocol gain utilization from all protocols on Fluid</p></figcaption></figure>
+
+
+
+# Vaults on Fluid
+
+### Vaults
+
+Vaults are a known standard mechanism for locking collateral and borrowing debt. Fluid utilizes this familiar single asset - single debt Vaults known from protocols like MakerDAO. Fluid takes vaults to next level by being the most capital efficient and optimized protocol enabling up to 95% of LTV on collateral.
+
+* **Enhanced Capital Efficiency and Higher Loan-to-Value (LTV) Ratios**: The Vault protocol optimizes capital efficiency by allowing users to borrow up to 95% of the value of their assets like ETH.&#x20;
+* **Innovative Liquidation Mechanism**: By adopting a groundbreaking liquidation process inspired by Uniswap v3, the Vault protocol enables streamlined and efficient liquidations, minimizing market impact and reducing liquidation penalties to as low as 0.1%.&#x20;
+* **Robust Oracle System for Enhanced Security**: The protocol utilizes a sophisticated oracle system that combines the strengths of Uniswap and Chainlink, ensuring accurate and reliable pricing data for assets. This system enhances the protocol’s security by providing multiple checks to determine when to liquidate bad debt and to prevent price manipulation attacks.
+
+**Liquidation = More Efficiency**&#x20;
+
+Fluid Vaults has the most advanced liquidation mechanisms. Fluid Vaults are able to provide the highest LTVs in the market, the protocol easily removes bad debt and enables the most gas efficient liquidation mechanism in DeFi.
+
+* **Lower Gas Costs**: Liquidation processes are streamlined to resemble a simple swap, significantly lowering the gas costs associated with traditional liquidation processes.
+* **Minimal Impact Liquidations**: The protocol only liquidates the amount necessary to bring the account back to a healthy state, which reduces the market impact and potential cascading liquidations common in other protocols.
+* **Innovative Liquidation Engine**: The design allows for simultaneous liquidation of positions within a specific range, making the process faster and more gas-efficient.
+* **Trader-as-Liquidator Model**: Integrates with DEX aggregators allowing any trader to participate in the liquidation process, ensuring liquidity and efficiency in liquidations.
+
+
+
+# Protocol Details
+
+#### Vault:
+
+Vaults are comprised of a collateral and a debt asset. Currently, Fluid has 2-token vaults such as: ETH/USDC, ETH/USDT, wstETH/ETH, wstETH/USDC, wstETH/USDT.&#x20;
+
+#### NFT:
+
+Each position in a vault is represented by an NFT. The NFT can be moved freely if needed. Each NFT comprises the vault including its debt and collateral assets.
+
+#### Position Parameters:
+
+* **Net APY** - The Net APY earning from the vault (supply interest - borrow interest)\
+  More Details [net-apy](https://fluid.guides.instadapp.io/user-guides/fluid-vault-protocol/net-apy "mention")<br>
+* **Collateral Factor** - Represents what percentage of the collateral can be borrowed against Sometimes called LTV (Loan to Value)
+* **Liquidation Threshold -** The ratio at which the position would be considered undercollateralized and Could be liquidated.
+* **Liquidation Max Limit** - The threshold above which 100% of your position gets liquidated instantly.
+* **Liquidation Price** - The collateral price at which the position would be considered undercollateralized and could be liquidated.\
+  Generally represented as liquidation price/current price of collateral.
+* **Liquidation Penalty -** This is the penalty on your collateral asset for liquidating the position, that has crossed the liquidation threshold, just until the threshold
+* **Ratio** - This is the Debt to Collateral ratio. Dollar value of Debt / Dollar value of Collateral or D/C ratio
+* **Supply APR** - Rate earned per year for supplying the collateral asset
+* **Borrow APR -** Rate to be paid per year for borrowing the debt asset
+* **Supply Absorb -** The collateral absorbed by the protocol of a borrower who becomes under-collateralized
+* **Borrow Absorb -** The borrowers debt settled during the process of collateral absorption in liquidation
+
+#### Withdrawal Limit:
+
+* **Base Limit** - The minimum limit for a Vault's withdrawal. The further expansion happens on this base
+* **Current Limit** - The limit until where you can withdraw. If it is $0 that means 100% of the users can withdraw
+* **Expand Percentage** - The rate at which Limits would increase or decrease over the given duration
+* **Expand Duration** - The time for which the limits expand at the given rate
+* **Withdrawable** - Amount available for instant withdrawal
+* **Withdrawal Gap -** Safety non-withdrawable amount to guarantee liquidations
+
+#### Borrow Limit:
+
+* **Base Limit** - The minimum limit for a Vault's borrowing. The further expansion happens on this base
+* **Current Limit** - The limit until where you can borrow
+* **Max Limit** - Maximum limit for a vault above which it is not possible to borrow
+* **Expand Percentage** - The rate at which Limits would increase or decrease over the given duration
+* **Expand Duration** - The time for which the limits expand at the given rate
+* **Borrowable** - Amount available for instant borrow
+
+### FAQs
+
+<details>
+
+<summary>Can team alter the rate interest curve at any point of time?</summary>
+
+No, The team cannot make major changes to the rates at any given point of time without going through a governance proposal. Though after the execution of [IGP#32](https://beta.atlas.instadapp.io/proposals/32), the team multisig has ability to change the rates by not more than 20% once in 96 hours. This enables the Fluid protocol to react faster than its normal 4 day execution.&#x20;
+
+For example if the borrowing rate of a token was 10% the team can change this rate to a value between 8%-12%.
+
+</details>
+
+
+
+# Vault Whitepaper
+
+{% file src="<https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FXhmUuTV7RpeVnPpadddp%2FVault_Protocol_Whitepaper_.pdf?alt=media&token=1509f8b8-dd0d-4da3-b765-f9188d9fc1dd>" %}
+
+**Dated: July 4, 2023**
+
+**Abstract**
+
+The Vault protocol by Fluid is a borrowing protocol implemented on EVM (Ethereum Virtual machine) offering enhanced capital efficiency, higher loan-to-value, lower liquidation penalties, and better rates. It utilizes advanced liquidation mechanisms, better oracles, and highly optimized allocation of liquidity.
+
+## Introduction <a href="#introduction" id="introduction"></a>
+
+The Vault protocol redefines the landscape of borrow and lending protocols. It introduces enhanced capital efficiency, higher LTV, lower liquidation penalty and better rates with smart debt & smart collateral.
+
+Smart debt & Smart collateral is a combination of Vault & DEX protocol of Fluid and hence won't be the focus of this whitepaper.
+
+At its core, the Vault protocol addresses the inherent capital inefficiency & liquidity segregation present in current lending protocols. By optimizing the liquidity aggregation into ticks or slots (inspired by Uniswap v3) & advanced liquidation mechanism, the protocol is able to offer increased loan-to-value (LTV) ratios, lower liquidation penalty & minimum liquidation.
+
+In traditional borrow & lending protocol, liquidation is like a limit order & highly inefficient, where liquidator selects each position to liquidate. Vault protocol revolutionizes liquidations similar to how Uniswap v3 has revolutionized limit orders. Allowing all the positions in range to get liquidated without any increase in gas. Rather than liquidating 50 to 100% of user's position, vault protocol only liquidates what's required, reducing the market sell offs and cascading effects that comes with it.
+
+In this whitepaper, we will delve into the intricacies of the protocol, exploring its core components, mechanisms, and the underlying technology that powers it.
+
+## Liquidations and Loan-to-Value <a href="#liquidations-and-loan-to-value" id="liquidations-and-loan-to-value"></a>
+
+The Vault protocol recognizes that the implementation of liquidations plays a critical role in determining the Loan-to-Value (LTV) of a lending protocol. Liquidations are essential for maintaining the safety and stability of the protocol by eliminating bad debts on time. However, there are two approaches to enhancing protocol safety: reducing the LTV or improving the liquidation mechanism.
+
+While reducing the LTV may enhance protocol safety, it also limits end-users’ borrowing capacity, giving competitors an advantage by offering better LTV ratios. On the other hand, optimizing the liquidation process can lead to a safer protocol with a higher LTV, thereby improving the overall experience and utility for end-users.
+
+In this regard, the Vault protocol introduces a groundbreaking liquidation mechanism that represents a significant advancement in design. This mechanism has the potential to enable users to borrow up to 95% of the value of their ETH. By implementing this innovative liquidation engine, the protocol aims to strike a balance between safety and borrowing capacity, providing users with increased flexibility and maximizing the utility of their assets.
+
+## Oracles <a href="#oracles" id="oracles"></a>
+
+Oracles play a critical role in the functioning of lending and borrowing protocols, serving as a key component for ensuring protocol security and efficient liquidity management. These oracles enables the timely identification and liquidation of bad debt, while also providing up-to-date pricing information. By leveraging oracles, protocols can enhance their overall security and potentially increase their LTV ratios.
+
+A robust and reliable oracle system has been implemented in the case of the Vault protocol. This oracle system combines the strengths of Uniswap and Chainlink to ensure the utmost accuracy and reliability of pricing data. The protocol incorporates three different time-weighted average price (TWAP) checkpoints in conjunction with the Chainlink price. These data points are compared against the current Uniswap price, verifying that it falls within a specific range and has not been subject to manipulation.
+
+By utilizing this comprehensive oracle system, the Vault protocol ensures that it can rely on the most recent and accurate DeFi prices for the purpose of liquidations. This enhances the protocol’s security and minimizes the risk of price manipulation, providing users with a more transparent and trustworthy borrowing experience.
+
+## Liquidation Mechanism <a href="#liquidation-mechanism" id="liquidation-mechanism"></a>
+
+The liquidation mechanism at the core of the Vault protocol represents a significant leap forward, drawing inspiration from Uniswap v3 while surpassing the effectiveness of existing borrowing and lending protocols by 100x. When a user creates a position, the protocol assigns it to a specific tick based on the user’s debt-to-collateral ratio, with the tick calculated as,
+
+*ratio = 1.0015^t, where t = tick*
+
+This innovative approach consolidates all users’ liquidity and streamlines the liquidation process for liquidators, resembling a simple swap-like operation.
+
+To further enhance efficiency, Fluid can be seamlessly integrated into DEX aggregators like 1inch, Paraswap, and 0x, similar to other DEX protocols like Uniswap or Curve. This integration empowers traders to obtain better prices and significantly reduces the liquidation penalty to as low as 0.1%. Such enhanced efficiency benefits borrowers, allowing them to minimize losses during liquidations effectively. Unlike other borrowing and lending protocols, which often subject users to considerable losses ranging from 50% to 100% in a single liquidation event, Fluid’s liquidation mechanism ensures that liquidation amounts are typically minimal, usually between 1% to 10%, just enough to bring the user’s position back to the liquidation threshold. By mitigating the forced selling of collateral during market crashes, Fluid’s approach prevents cascading effects and contributes to stabilizing the overall market during turbulent times.
+
+### Ticks and Liquidity <a href="#ticks-and-liquidity" id="ticks-and-liquidity"></a>
+
+In the Vault protocol, the allocation of a user’s position to a specific tick is determined by their debt-to-collateral ratio. This ratio, calculated as *ratio = debt/collateral*, plays a crucial role in positioning the user within the protocol. To calculate the tick, the protocol utilizes the formula *ratio = 1.0015^t*, where t = tick, represents the specific tick value associated with the user’s position.
+
+While these calculations are conceptually straightforward, performing them at the smart contract level can be resource-intensive in terms of gas consumption.
+
+![Figure 1: Relationship between liquidity and tick values.](https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F44UdobOS3QO7XMYQVMhY%2F0.png?alt=media)
+
+To optimize gas efficiency, the Vault protocol introduces a newly developed TickMath library. Inspired by the efficient TickMath library utilized in Uniswap v3, this library enables the calculation of tick values from ratios and vice versa in a highly gas-optimized manner.
+
+### Branch and Liquidation <a href="#branch-and-liquidation" id="branch-and-liquidation"></a>
+
+In Fluid, user liquidity is consolidated into ticks which ensures efficient management of positions. When a user undergoes liquidation, their position needs to be retrieved in real-time. To achieve this, Fluid employs a branch-based mechanism. A branch represents the outcome of liquidation related variables and allows users to access their recent position in a gas-optimized manner, regardless of the number of previous liquidations they have experienced.
+
+The user’s tick prior to liquidation serves as the starting point and establishes the debt factor and connection to the branch. By iterating through the branch, starting from the user’s tick, the system identifies the minimum tick (minima) and calculates the total liquidation that has occurred. This process enables efficient and precise liquidation, even in scenarios where users have been liquidated multiple times.
+
+The graph below visually demonstrates the movement of collateral prices and it's impact on ticks. As the collateral price rises, new users enter at higher ticks. Conversely, when the price declines, higher ticks progressively undergo liquidation and move to lower ticks.
+
+The lifespan of a branch in Fluid extends until it reaches the minima tick of its base branch. At this stage, the branch is merged with the base branch, allowing the liquidation process to continue seamlessly from that point onward.
+
+![Figure 2: Collateral price graph and Branch Cycle](https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FGSuO9kXNoaPAT1MasmWt%2F1.jpeg?alt=media)
+
+Let’s examine the diagram above to better understand the concepts presented: With every new local maxima a new branch gets connected with the base branch. For example:
+
+1. Branch 2 is connected with Branch 1, gets merged with Branch 1 at point *d* thus ending the lifespan of Branch 2.
+2. Branch 3 is connected with Branch 1, this branch is currently an active branch. It can merge with Base Branch 1 if the collateral value falls to that level again.
+
+Now, let’s consider the positions of users located at points *a* and *c* which represent two local maxima on the graph. Although there may be multiple users at different ticks between points *a - c* and *b - d*, for simplicity, we will concentrate on these two points.
+
+By analyzing the diagrams, we observe that users at point *a* experience a final debt reduction of 75%, resulting in a final debt ratio of &#x30;*.*&#x32;5. The minimum tick of Branch 1 indicates the point till which their positions were liquidated.
+
+Therefore, the final position for users at point *a* after all the liquidation can be calculated as follows:
+
+*debt = (0.25/1) ∗ initialDebt = 0.25 ∗ initialDebt*
+
+*ratio = 1.0015^m, where m = minimaTick*
+
+*collateral = debt/ratio*
+
+For users at point *c* the final debt should be &#x30;*.*&#x33;, signifying a 70% reduction in debt. In Branch 2, the debt was reduced by 40% (from 1 to &#x30;*.*&#x36;), and then the branch merged with Branch 1. Subsequently, Branch 1 underwent a liquidation of 50% (from &#x30;*.*&#x35; to &#x30;*.*&#x32;5), resulting in a total debt reduction of 1 \* &#x30;*.*&#x36; \* &#x30;*.*&#x35; = &#x30;*.*&#x33; or 30% of the initial debt. When branches merge, the debt factor of Branch 2 transitions into the connection factor.
+
+To calculate the connection factor:
+
+* *Debt factor of Branch 2 at merge = 0.6*
+* *Debt factor of Branch 1 (base branch) at merge = 0.5*
+* *Connection factor = 0.5/0.6 = 0.8333333*
+
+To determine the final debt for users at point *c* :
+
+*debt = \[finalDebtFactor/(initialDebt ∗ connectionFactor)] ∗ initialDebt*
+
+*debt = (0.25/(1 ∗ 0.8333333333)) ∗ initialDebt = 0.3 ∗ initialDebt*
+
+*ratio = 1.0015^m, where m = minimaTick*
+
+*collateral = debt/ratio*
+
+### Conclusion
+
+Vault protocol is a huge leap over existing borrow & lending protocols. It offers enhanced capital efficiency, higher LTV, better rates, lowest liquidation penalty, smart debt & smart collateral. It allows to only liquidate what's required, reduces force sell offs in market, making the overall ecosystem healthier. Similar to how Uniswap v3 innovated the Limit orders, Vault Protocol is bringing innovation to Liquidation.
+
+
+
+# Advanced Liquidation Mechanism
+
+### Slot Based Approach
+
+When users initiate a position by opening a vault within the protocol, their debt and collateral are calculated into a ratio, which is then assigned to a specific slot. This aligns with the range of debts held by others in similar positions. Drawing inspiration from Uniswap v3’s slot-based liquidity, this method is engineered to enhance the efficiency of liquidations.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FyjJjIBiLiGC4ljmEXNab%2F4.Liquidation%20mechanism.gif?alt=media&#x26;token=824b46dc-89f2-4cbc-a863-7b3a0b963b2a" alt=""><figcaption></figcaption></figure>
+
+When the value of collateral decreases to the point where the debt ratio surpasses the liquidation threshold, the protocol aggregates all vaults in that slot for liquidation in a single transaction. Afterward, the system recalibrates the remaining vaults, adjusting their debt ratio positions down to the next slot in response to the new price range.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F7SegMA9FtsiNXCD50mh3%2FScreenshot%202024-03-02%20at%201.50.53%E2%80%AFPM.png?alt=media&#x26;token=1d8afe3b-f186-48ce-8310-f02ee052e3cc" alt=""><figcaption><p>Once a slot is liquidated or recalculated, all positions with the same ratio are 'grouped' together</p></figcaption></figure>
+
+Fluid's sophisticated liquidation means the protocol is able to efficiently remove and clear debt, this process allows for up to 95% borrowing of asset value, signifying the protocol's high capital efficiency.
+
+### **Lower Gas Costs**
+
+The Vault protocol dramatically lowers the gas costs associated with liquidations by streamlining the process to resemble a simple swap. This efficiency is achieved through the design of the liquidation mechanism, which allows for the simultaneous liquidation of all positions within a specific range. This approach contrasts sharply with traditional DeFi protocols, where each position must be individually targeted and liquidated, often requiring multiple transactions and, consequently, higher gas fees. By optimizing the liquidation process the protocol saves on gas but also speeds of the resolution and closure of bad debt from the protocol.
+
+### **Minimal Impact Liquidations**
+
+One of the key innovations of the Vault protocol is its minimal impact approach to liquidations. Unlike traditional systems where a significant portion of a user's position might be liquidated—sometimes as much as 100%—to cover bad debt, the Vault protocol only liquidates the minimum necessary to restore the account to a healthy state. This method minimizes market impact, reduces the potential for cascading liquidations (where one liquidation triggers another, causing a domino effect), and generally contributes to greater market stability. This approach is particularly effective during volatile market conditions, where aggressive liquidations can exacerbate price movements and lead to greater systemic risk.
+
+### **Trader-as-Liquidator**
+
+A novel aspect of the Vault protocol is its integration with DEX aggregators, enabling any trader to act as a liquidator. This model effectively turns the liquidation process into another trading opportunity, accessible through familiar platforms like 1inch, Paraswap, and 0x.&#x20;
+
+Traders participate in the liquidation process indirectly by completing normal swaps and trades on any DEX. The portion of the collateral required to liquidate the position is made available for in the trading routes,  because liquidations are so extremely gas efficient the liquidatable collateral will have a natural discount enabling the trader to get a better swap while simultaneously liquidating debt from Fluid.  This means Fluid is less reliant on Keepers and other dedicated networks of liquidation bots and can be liquidated from normal every day users.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2Fkip3FHEeKjYTyZ5Pvmfc%2F5.Traders-are-Liquidators.gif?alt=media&#x26;token=083b3be0-e091-4c72-bb03-84ab318e4c5a" alt=""><figcaption></figcaption></figure>
+
+
+
+# Vault Liquidation
+
+### What happens if I am liquidated?
+
+When your vault or position is liquidated, a portion of it is sold to repay your debt and return your position to a safe state. In addition to the debt repayment, a liquidation penalty is also charged.
+
+#### Fluid Vaults have the Lowest Liquidation Penalties!
+
+Thanks to the efficiencies built into Fluid, liquidations are quick and gas-efficient, allowing the protocol to charge the lowest liquidation fees on the market. Detailed information about each vault, including their parameters and liquidation penalties, can be found [Vaults Statistics Page](https://fluid.instadapp.io/stats/1/vaults)
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FwjxV1RcIqKbJuwbqKNbB%2Fimage.png?alt=media&#x26;token=d334809c-6179-4536-8b97-876f93a8be24" alt=""><figcaption><p>ETH/USDC the most common borrowing vault charges a 1% liquidation penalty</p></figcaption></figure>
+
+## Understanding Liquidation Threshold
+
+Each vault on Fluid has a Liquidation Threshold, which is the highest debt-to-collateral ratio the vault can have before it can be liquidated. If your debt grows or the value of your collateral drops, causing the ratio to exceed the Liquidation Threshold, your vault can be liquidated.
+
+We also display an estimated price calculation in the top right corner, showing the value at which your collateral would trigger a liquidation.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FNrsg56Fvhd38cp4An6eL%2Fvailt112.png?alt=media&#x26;token=5ac93682-ee5a-465f-a696-1f380032865c" alt=""><figcaption><p>Mouse over the Liquidation Price to see the current price for the collateral.</p></figcaption></figure>
+
+### Debt to Collateral Ratio
+
+On Fluid, we assess your risk using the Debt to Collateral Ratio, which is your debt divided by the value of your collateral. The maximum percentage is derived from the collateral's Loan to Value (LTV) Ratio.
+
+#### Understanding the Risk Ratio
+
+Here's an example to help you understand how the Debt to Collateral Ratio and Liquidation Threshold determine your Risk Ratio:
+
+* **Lets say you have 1 ETH worth $4000 and its Liquidation Threshold is 75%::**\
+  \
+  $1000 borrowed against Collateral Vault of $4000 =  25% Collateral Ratio\
+  \
+  \&#xNAN;*The position would display: 25%/75%*<br>
+* **If the value of ETH were to fall to $2000:**\
+  \
+  $1000 Borrowed against Collateral Value of $2000 = 50% Collateral Ratio\
+  \
+  \&#xNAN;*The position would display: 50%/75%*<br>
+* **Lets say you then remove $500 worth of Collateral:**\
+  $1000 Borrowed against Collateral Vault of $1500 = 66% Collateral Ratio\
+  \
+  \&#xNAN;*The position would display 66%/75%*
+
+### Liquidation FAQs
+
+<details>
+
+<summary>Does weETH/wstETH vault use on chain price?</summary>
+
+No, the weETH/wstETH Vault uses Contract Backing for the liquidation oracle. You can learn more about this particular vault here: [contract-based-pricing](https://fluid.guides.instadapp.io/vault-protocol/miscellaneous/contract-based-pricing "mention")
+
+</details>
+
+<details>
+
+<summary>My vault is pass the liquidation threshold but is not liquidated, will I be liquidated?</summary>
+
+**Yes your position is still at risk of being liquidated!** Once your position passes the threshold it can be liquidated, but it may not happen immediately.&#x20;
+
+If your position is still at risk you can take the time now to unwind/reduce your risk ratio to make your position safe and prevent a liquidation event.
+
+</details>
+
+<details>
+
+<summary>What is the Max Liquidation Threshold? </summary>
+
+While the Liquidation Threshold determines when a vault can be liquidated the protocol also has a 'hard' ceiling for liquidation. When a vault passes the max liquidation threshold it is liquidated automatically.&#x20;
+
+</details>
+
+<details>
+
+<summary>How can I see the transaction I was liquidated in?</summary>
+
+Due to the way liquidations work on Fluid, your position is not individually liquidated but instead a portion of all at risk positions is liquidated, all at once in one transaction. Please contact us if you want us to help you locate the specific liquidation transaction for you. \
+\
+\&#xNAN;***Please Note: The liquidation transaction on Fluid Vaults does not read like a liquidation tx from other lending protocols as it liquidates multiple positions at once. We will be developing a UI to better display Vault interactions.***
+
+</details>
+
+
+
+# Why are liquidations in Fluid 100x better?
+
+1. Fluid can liquidate "n" number of positions **at once** in a single transaction with near to **no increase in gas** while other protocols will take "n" different transactions with "n times more gas".
+2. Liquidation **penalty** in Fluid can be **as low as** **0.1%**, while on other protocols it generally ranges from 5-10% which in other protocols is like a 50-100x penalty difference.
+3. **Traders** or liquidators liquidate **bad debt** (and not a particular position), similar to Uniswap v3 where trade goes through active liquidity (and not through a particular range order). Meaning, integration of adding bad debt as trading liquidity for DEX aggregators is as simple as adding a Uniswap, Curve, Balancer or any other AMM. This will allow **liquidations** to even happen **through traders** rather than liquidators. For highly active pairs, setting the right liquidation penalty can route most liquidations through trades rather than liquidators.
+4. Gas on liquidation in Vault protocol is around **\~150k** while on other protocols it ranges from 300k to 1M (as the liquidators take flashloan and arbitrage the liquidation with other DEXes).
+5. Liquidate **only what’s required**. Liquidation on Fluid can only happen **till Liquidation Threshold** and not below.
+6. **No heavy infra** needed for liquidation (tracking all positions that are at risks of liquidations). Even a noob can set it up.
+
+
+
+# LRT Points on Fluid
+
+Fluid users of weETH vaults earn points from three reward sources including their underlying staking rewards!
+
+## Eigenlayer + Ether.Fi + Zircuit Points
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FHi4PdwIZej2TcymqxNXD%2Fimage.png?alt=media&#x26;token=42657556-7732-4891-aa0a-237302d1784b" alt=""><figcaption><p>Rewards are located on the top left of the info bar of the pariticpating vaults.</p></figcaption></figure>
+
+The following vaults are eligible for rewards:&#x20;
+
+* weETH/wstETH
+* weETH/USDC
+* weETH/USDT
+
+### What is Eigenlayer?
+
+Eigenlayer introduces a novel system leveraging Ethereum's Staking Mechanisms. It pioneers fresh economic paradigms by repurposing staking consensus to innovate diverse functionalities. Examples range from Data Availability Layers to Multichain Bridges, AI, and various data applications benefiting from decentralized consensus and verification. Discover more about Eigenlayer on their homepage: <https://www.eigenlayer.xyz/>
+
+### What is Ether.Fi?
+
+Ether.Fi serves as a premier Eigenlayer restaking service provider. Through supplying staked ETH to Ether.Fi, users unlock enhanced rewards within the Eigenlayer ecosystem. Ether.Fi facilitates seamless delegation and restaking on Eigenlayer, offering users a streamlined tokenization of their deposits. LRT like eETH are anticipated to accrue higher returns compared to LST like stETH over time by benefiting from supplementary protocol rewards derived from Eigenlayer services. For more information into Ether.Fi see: <https://www.ether.fi/>
+
+### Points Leveraging and Farming&#x20;
+
+Leveraging is a risky action by increasing your exposure you expand your ability to be liquidated. Fluid's innovations and focus on security enables high leveraging with lower risks, but risks remain!&#x20;
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FV7Sogn3EKmgqmFxYjpIN%2FScreenshot%202024-05-13%20at%201.18.24%20PM.png?alt=media&#x26;token=4ac628e6-4265-4a22-88c6-c7ebc0d5df3d" alt=""><figcaption><p>Preview Points Multipliers in the Leverage Panel</p></figcaption></figure>
+
+### Why do Points farmers Love Fluid?
+
+For weETH Leveragers: Fluid ensures the best value for your deposit. Offering the highest LTV and at the same time utilizing contract pricing to ensure you can leverage while maintaining the best pricing for weETH preventing unnecessary liquidations.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F6XIqEYmh44VjZJdqg6g0%2FScreenshot%202024-06-20%20at%204.51.59%20PM.png?alt=media&#x26;token=2cfa86f1-d211-4abc-8758-97c98e948f83" alt=""><figcaption><p>Maximizing weETH/wstETH Vault</p></figcaption></figure>
+
+Fluid has worked closely with Ether.Fi, Zircuit, and other LRT providers in the space earnings users of Fluid some of the highest points around! Multiple points means better returns. See this [tweet](https://x.com/DeFi_Made_Here/status/1803782321415278669) here for a rough but speculative estimation of point value.
+
+### High Risks: Leveraging New Tech Stack
+
+The Eigenlayer is a developing technical stack with increasing and changing functionality at the moment. The Ether.Fi and Zircuit protocols can be effected by slashing, oracle risks, governance, smart contract issues or other unforeseen issues or issues with Eigenlayer itself that can cause you partial or total losses! Please use these assets, markets and leveraging tools at your own risk!  &#x20;
+
+#### Important Notes regarding Points Farming:
+
+* **weETH/wstETH Vault uses the weETH backing contract** to check for liquidation, this means on-chain price depegs will not effect this particular vault like the [Renzo ezETH depegging event](https://twitter.com/DeFi_Made_Here/status/1783127988995084632), under this situation Fluid users of this vault would not be liquidated. Please note deleveraging during this kind of event would lock in your losses by selling at a loss.
+* **weETH/USDC and weETH/USDT vaults use standard price oracle configurations for Fluid vaults.** checking the weETH onchain price and cross referencing it with the Uniswap TWAP price. This means a price depeg event would effect these vaults.
+* **weETH deposits into Fluid are being deposited into Zircuits Deposit Contract.** Instadapp [Governance enabled weETH deposits into the Zircuit contracts](https://atlas.instadapp.io/proposals/19), this change does not effect how weETH Vaults work in any way on Fluid. In exchange users of weETH on the protocol earn 1.5x in Zircuit points. Learn more about Zircuit here: <https://zircuit.com/>
+
+### Where can you track your Eigenlayer and Ether.Fi Points?
+
+<https://app.ether.fi/portfolio>
+
+### Where to can you track your Zircuit Points?
+
+<https://stake.zircuit.com/portfolio>
+
+***All Points and Rewards are tracked by their respective protocols, Fluid does not maintain any records of your points or progression.***
+
+### LRT Points FAQ
+
+<details>
+
+<summary>How long does it take for a leveraged position in the weETH/wstETH pool to reflect on the Etherfi dashboard?</summary>
+
+Leveraged positions should appear on the Etherfi dashboard within a few minutes after creation, although occasional delays may occur you can contact Ether.Fi if the position is taking too long too load.
+
+</details>
+
+<details>
+
+<summary>Do I need to borrow to earn points by holding weETH/wstETH?</summary>
+
+No, you can just supply into the weETH/wstETH to earn points you do not need to borrow.&#x20;
+
+</details>
+
+<details>
+
+<summary>How can I close my leveraged position? </summary>
+
+To close a leveraged position you use the 'Deleverage' strategy, this does the opposite of leverage. It will take your collateral swap it and use it to pay back your debt. Learn more here: [Vault Strategies](https://fluid.guides.instadapp.io/user-guides/fluid-vault-protocol/vault-strategies)
+
+</details>
+
+<details>
+
+<summary>Why are my points increasing when I borrow on these vaults?</summary>
+
+The Points Multiplier shown on the weETH vaults assumes you are resupplying the borrowed amount back into the vault. \
+\
+If you borrowed some wstETH but haven't supplied it back your points multiplier may be reflecting incorrectly. Resupply the borrowed amount to the position to reflect your multiplier correctly.
+
+</details>
+
+Have another question? Reach out to us on [Discord](https://discord.com/invite/C76CeZc) or on [Twitter](https://twitter.com/0xfluid).
+
+
+
+# Contract Based Pricing
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FK6NTpIqTXDfASHukVQNN%2FGMBT4t3WAAA6gzl.jpeg?alt=media&#x26;token=1ef242ad-b59a-405e-be29-73f83a50df26" alt=""><figcaption></figcaption></figure>
+
+Apart from the attractive 3x Etherfi points, 1.5x Zircuit points and 1x Eigen Layer points that one can earn using the weETH/wstETH vault, and 3.5x Etherfi points, 3x Veda points and 1x Symbiotic points that one can earn using the weETHs/wstETH vault, Fluid also protects its users from the volatile market fluctuations in the prices of weETH and weETHs with respect to wstETH.
+
+Fluid uses [contract](https://etherscan.io/address/0x322F7FCEA001bEBB63413f42B0028E5A81b933EF) based price (directly from weETH, weETHs and wstETH contracts), instead of relying on the market price (DEX or on-chain price). This basically helps in protecting the users against snappy volatile market moves which would have otherwise caused liquidations because it is instead looking at the underlying ETH backing of the asset on the contract. So, any fluctuation in the market price wont affect the prices on Fluid keeping the ratio much more stable than it would have otherwise been and hence saving from liquidations.
+
+Even if there are any market depegs, there will be no liquidation cascades. Wrapped Staked ETH has been very stable, especially since staked ETH withdrawals have been available, there is very low risk for a depeg.&#x20;
+
+\
+Similarly weETH is the market leader in restaked ETH and was the first protocol to have withdrawals enabled. So because of these reasons, we think this is the best approach here to protect our users from any liquidations in the case of any unlikely (and if so, extremely likely temporary) depeg.
+
+{% hint style="info" %}
+Note that this contract based pricing only applies for weETH/wstETH vault and not the weETH/USDC or weETH/USDT vaults
+{% endhint %}
+
+
+
+# ETH Borrow Rate Management
+
+Ether(ETH) on liquidity layer has adopted a new mechanism to adjust its rates after the passing of [IGP#25 ](https://beta.atlas.instadapp.io/proposals/25)which basically caps the ETH borrow rate with respect to wstETH lending rate.
+
+### Rate Handling for ETH&#x20;
+
+The borrow rate of ETH is adjusted in such a way that whatever is the current wstETH lending rate(lets say x%), the borrow rate of ETH is adjusted such that at kink1 the borrow rate is (x+k)% and at kink2 the borrow rate is (x+k+0.5)% where 'k' is any constant value which can change in future.
+
+#### For Example:
+
+Currently the 'k' is set to 1.5% so basically if the current lending rate of wstETH is 10% then the\
+-> Borrow rate of ETH at kink1 (Utilization: 50%) is (10+k)% = (10+1.5)% = 11.5%
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FVPFwO9fgdVCSDJsN2D5K%2FScreenshot%202024-09-04%20at%201.42.01%E2%80%AFPM.png?alt=media&#x26;token=1279f9a0-df1b-49ad-ad7f-2f35eb435c3f" alt=""><figcaption></figcaption></figure>
+
+-> Borrow rate of ETH at kink2 (Utilization: 90%) is (10+k+0.5)% = (10+1.5+0.5)% = 12%
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2F8QNHLL6jVMXHgPCoKWef%2FScreenshot%202024-09-04%20at%201.43.03%E2%80%AFPM.png?alt=media&#x26;token=ac201825-6204-4cbf-b878-c059d7e2e66e" alt=""><figcaption></figcaption></figure>
+
+The ETH borrow rates are re-adjusted by introducing a new BufferRateHandler via [IGP#37](https://atlas.instadapp.io/proposals/37) to adjust the ETH borrow rates w\.r.t wstETH lending rates.
+
+* **Old BufferRateHandler** Address: [0xDF10FE6163c1bfB99d7179e1bFC2e0Bb6128704f](https://etherscan.io/address/0xdf10fe6163c1bfb99d7179e1bfc2e0bb6128704f)
+* **New** **BufferRateHandler** Address: [0xB5af15a931dA1B1a7B8DCF6E2Cd31C8a3Dd1E134](https://etherscan.io/address/0xb5af15a931da1b1a7b8dcf6e2cd31c8a3dd1e134#code)
+
+This will enhance the protocol's efficiency and adaptability to market conditions.
+
+{% hint style="info" %}
+The ETH borrow rate pegging to wstETH lending rates is only live on Arbitrum and Base.
+{% endhint %}
+
+
+
+
+# DEX on Fluid
+
+## What is the DEX Protocol
+
+The DEX protocol is a novel addition that is built on top of the Liquidity Layer, introducing new primitives in **Smart Debt** and **Smart Collateral**. This allows users to utilize their debt (for the first time) and collateral as liquidity for trading purposes.&#x20;
+
+The DEX protocol is the single most powerful and capital efficient decentralized exchange in DeFi, offering the ability to generate up to $39 in liquidity per $1 in TVL.
+
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfZrSel1wosPcYYTBuNmy2mWHot1qG0jXbYYIu_vvO-BSskONgXO4K-93vbvitIucUUF68STTsnXMsbLL3Q86LWT15naSm-UbISqdyhGPNDiEvVJEak4G56KlBxuLto8ce1Hm7Mlg?key=Q-PYXvvJw4bkxbNNWwVn3w" alt=""><figcaption><p>A quick look at a Smart Vault position utilizing both Smart Collateral and Smart Debt. </p></figcaption></figure>
+
+### Features of the DEX Protocol
+
+* **Enhanced Utilization of Assets -** The DEX protocol allows for users to experiment with different strategies to create their ideal collateral/debt combinations, earning new yield on their collateral and turning debt into a productive asset.
+* **Superior Capital Efficiency -** Users can create up to 39x the amount of liquidity from 1x the amount of assets, multiplying their trading fee earnings by 39 times.
+* **New Financial Primitives -** Unlike traditional DEX models that use generic token LPs, Smart Collateral is tightly integrated into the Liquidity Layer, and Smart Debt represents the first case of debt being used as liquidity. This unique approach allows users to reduce their debt using the trading fees earned.
+
+
+
+
+# Smart Collateral
+
+Smart Collateral is a single range order that enables users to utilize their capital in a variety of ways including:
+
+* **Lending it** - Giving users a simple way of earning yield with little risk or effort.
+* **Borrowing against it** - This provides users with more flexibility and enables more efficient asset utilization.
+* **Deploying it as AMM liquidity** - By using their collateral as automated market maker (AMM) liquidity, users can simultaneously earn both lending and trading fees. This allows for leverage, effectively increasing trading fee earnings.
+
+In its simplest form, Smart Collateral are the DEX’s LP tokens with the added composability of being an asset that can be borrowed from and lended, whilst increasing DEX liquidity at the same time.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FjYI2cWgQ9zjX4ZDhLxMM%2FSmart-Collateral-(2).gif?alt=media&#x26;token=29edb326-e2d2-4114-b55e-cb7ac1d5ed6d" alt=""><figcaption><p>Smart Collateral assets earn lending fees and benefit from swaps routed through the Fluid DEX by earning trading fees.</p></figcaption></figure>
+
+The architecture of the DEX pool is very similar to a combination of Uniswap v2 & Uniswap v3, otherwise known as a single auto rebalancing range order. Smart Collateral will have a similar way of building up liquidity, through earning trading fees.
+
+
+
+
+
+# Smart Debt
+
+Smart Debt is a groundbreaking concept, marking the first time debt can be transformed into a productive asset by using it as liquidity for the DEX. Trades get routed through the Smart Debt liquidity and the trading fees are used to pay down the debt.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FkFUibW5iXamIAmTDayLj%2FSmart-Debt-(1).gif?alt=media&#x26;token=340dd4b9-1713-4be0-982d-b5b2cf6d32c9" alt=""><figcaption><p>Users can now benefit from their debt being used as liquidity with the resulting fees paying down their debt.</p></figcaption></figure>
+
+Smart Debt can be considered as the inverse of any AMM pool, utilizing the debt as liquidity rather than a token. While traditionally debt leaves the lending protocol, Smart Debt is still used as DEX trading liquidity.
+
+#### Liquidity
+
+Liquidity gets built up in the Smart Debt pool from users who borrow from a Smart Debt pool via any enabled vault. If a user deposits ETH collateral and takes on a USDC/USDT Smart Debt position, the borrowing is occurring through the Smart Debt pool and a share of that overall pool is allocated to that specific user.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FiNPmBfPcbN7b25yF4lZE%2FSmart-Debt-NEW.gif?alt=media&#x26;token=e766fabe-6fd6-423a-8aa5-5fb6b834d99d" alt=""><figcaption></figcaption></figure>
+
+#### Best Borrow Rates
+
+Borrow rates will generally remain fairly stable, ranging from 3-5% depending on how the rate curve is being managed. The trading APR will vary from day to day, depending on the level of trading activity.&#x20;
+
+This means that users will be able to get the best borrow rates in the industry due to this structure, even having the possibility of getting paid to borrow! This positions Fluid as the perfect place to manage your assets.
+
+
+
+
+# Fees
+
+**Trading fees** - Pools on the DEX can be set to any trading fee by governance voting.
+
+\
+**Revenue Cut** - Revenue Cuts can be turned on through governance voting and could consist of a cut from trading fees and/or a fee from any Smart Vault.
+
+
+
+
+
+# Oracles
+
+Fluid’s DEX has an inbuilt most optimized TWAP oracle. It allows you to fetch the last 5 min data in <15k gas; Last 15 min data in <30k gas. This makes it optimal to be able to use DeFi.&#x20;
+
+It also returns additional data like: maxima & minima during that time frame. **Maxima** is the highest price & **minima** is the lowest price during the time period the user is fetching. Making it easier to predict the token’s volatility or manipulation and accordingly adjust the protocol’s behavior.
+
+
+
+
+# Risks
+
+Because of Fluid’s Liquidity Layer sourcing the same liquidity for the DEX and Lending, there is no risk of a liquidity crunch during either a market crash or surge.
+
+### Market Crash Scenario
+
+In the event of a sudden market crash, the market is selling crypto (for ex. ETH) for USDC. For the DEX protocol, this means that LPs will take ETH and give USDC back to the traders. This increases the ETH liquidity in the protocol, increasing the overall ETH liquidity in Fluid via the liquidity layer; thus doing the opposite of a liquidity crunch.
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FBkhqP0eIhw5OWrAW6U1E%2FRisk-Video-(1).gif?alt=media&#x26;token=487a151b-bd7c-4376-8261-ff24ef70a38d" alt=""><figcaption><p>Visual representation of how the DEX deals with risky scenarios.</p></figcaption></figure>
+
+If we explain this in another way using the WBTC/ETH pairing, ETH is historically more volatile than BTC. So when there is an ongoing market crash, many participants are selling ETH for BTC. This also increases ETH liquidity in Fluid.&#x20;
+
+The same principle applies to other pairs, such as stETH or eETH, which are paired with ETH. Fluid’s liquidity remains sufficient enough to handle liquidations, even in a market collapse. This is due to its advanced liquidation process, which is a 100x improvement over existing borrowing and lending protocols.
+
+### Market Surge Scenario
+
+During an upward market trend, the reverse happens. Liquidations shift to pairs where USDC is the collateral and ETH is the debt. As the price of ETH rises, more USDC flows into Fluid, while ETH exits the protocol.
+
+This boosts USDC liquidity, ensuring smooth liquidations during market rallies.
+
+
+
+
+# Protocol Details
+
+### Vaults:
+
+Vaults are composed of collateral and debt, in the DEX’s case, these Vaults can have 3 different appearances:
+
+* Smart Collateral/Normal Debt: WBTC - cbBTC / USDC or weETH - ETH / wstETH
+* Normal Collateral/Smart Debt: ETH / USDC - USDT or wstETH / USDC - USDT
+* Smart Collateral/Smart Debt: WBTC - cbBTC / WBTC - cbBTC or wstETH - ETH / wstETH - ETH
+
+**NFT** - Each position in a Vault is represented by an NFT. The NFT can be moved freely if needed. Each NFT comprises the Vault including its debt and collateral assets.
+
+### Position Parameters:
+
+**Net APY** - The Net APY earning from the Vault (supply interest - borrow interest).
+
+**Collateral Factor** - Represents what percentage of the collateral can be borrowed against. Sometimes called LTV (Loan to Value).
+
+**Liquidation Threshold** - The ratio at which the position would be considered under-collateralized and could be liquidated.
+
+**Liquidation Penalty** - This is the penalty on your collateral asset for liquidating the position that has crossed the liquidation threshold, just until the threshold.
+
+**Liquidation Price** - The collateral price at which the position would be considered under-collateralized and could be liquidated. Generally represented as liquidation price/current price of collateral.
+
+**Net APR (Smart Collateral)** - Trading APR + Collateral tokens’ Net APR
+
+**Net APR (Smart Debt)** - Debt tokens’ Net APR - Trading APR
+
+### Vault Details:
+
+**7d Volume** - The average volume of the last 7 days
+
+**7d Fees** - The average fees earned by the pair in the last 7 days
+
+**Trading Fees** - The fees that the pair is earning on the smart collateral/smart debt Vaults
+
+**Revenue Cut** - The % of the fee that is sent to Fluid’s treasury
+
+**Pool Price** - The exchange rate of wstETH to ETH determined by the amount of ETH / wstETH of wstETH in the pool
+
+**Shift Time** - The time taken to complete the rebalancing
+
+**AMM Curve** - The DEX uses the x\*y=k curve, but the liquidity is contracted within a range that is set by governance upon pool creation
+
+**Lower Range** - Lower bound of the range that the Pool liquidity stays in
+
+**Center Price** - The price at which the Pool rebalances itself once the Upper or Lower bounds are breached by the pool price
+
+**Upper Range** - Upper bound of the range that the Pool liquidity stays in
+
+**Lower Range (%)** - The momentary % difference that the Pool price is away from the Lower bound
+
+**Upper Range (%)** - The momentary % difference that the Pool price is away from the Upper bound
+
+**Lower Bound Price** - The lower threshold that, when breached, triggers the rebalancing
+
+**Upper Bound Price** - The upper threshold that, when breached, triggers the rebalancing
+
+**Center Min Price** - The minimum price up to, which the center price can move.
+
+**Center Max Price** - The maximum price up to, which the center price can move.&#x20;
+
+### Smart Debt:
+
+**Total Debt** - Total amount of asset debt taken from the pool
+
+**Effective Reserves** - The amount of the asset on the Liquidity Layer available to be taken as debt
+
+#### Borrow Limit:
+
+**Base Limit** - The minimum limit for a Vault's borrowing. The further expansion happens on this base.
+
+**Current Limit** - The limit until where you can borrow
+
+**Max Limit** - Maximum limit for a vault above which it is not possible to borrow
+
+**Expand Percentage** - The rate at which Limits would increase or decrease over the given duration
+
+**Expand Duration** - The time for which the limits expand at the given rate
+
+**Borrowable** - Amount available for instant borrow
+
+#### Smart Debt:
+
+**Total Collateral** - Total amount of asset collateral put into the pool
+
+**Effective Reserves** - The amount of the asset on the Liquidity Layer available to be taken as debt&#x20;
+
+#### Withdrawal Limit:
+
+**Base Limit** - The minimum limit for a Vault's withdrawal. The further expansion happens on this base
+
+**Current Limit** - The limit until where you can withdraw. If it is $0, that means 100% of the users can withdraw
+
+**Expand Percentage** - The rate at which Limits would increase or decrease over the given duration
+
+**Expand Duration** - The time for which the limits expand at the given rate
+
+**Withdrawable** - Amount available for instant withdrawal
+
+**Withdrawal Gap** - Safety non-withdrawable amount to guarantee liquidations
+
+
+
+
+# Dynamic Trading Fees
+
+### Introduction
+
+Dynamic trading fees were introduced to optimize trading volume while maintaining sustainable rewards for Smart Vault participants, following the execution of [IGP#84](https://atlas.instadapp.io/proposals/84).
+
+The Dynamic trading fees are also applied on wstETH-ETH(#1) and USDC-ETH(#12) after the execution of [IGP#89](https://fluid.io/gov/proposals/89).
+
+### Background
+
+The USDC-USDT DEX Pool (#2) faced volume challenges that required a strategic solution. After careful analysis, we identified two potential approaches:
+
+1. **Flat Fee Reduction**: Lower the fee to a static 0.003%
+2. **Dynamic Fee Structure**: Implement a variable fee system based on price deviation
+
+Similarly the dynamic fees have also been applied for wstETH-ETH(#1) and USDC-ETH(#12) in order to benefit the smart collateral and smart debt vault users with most optimized trading APR by micromanaging the trading fees.
+
+### How Dynamic Fees Work&#x20;
+
+The dynamic fee system uses a mathematical function based on the 3x² - 2x³ curve, which provides a smooth, responsive fee adjustment based on price deviation from peg.
+
+#### Core Mechanics
+
+* **Fee Range**: Fees dynamically adjust between 0.003% (minimum) and 0.01% (maximum)
+* **Price Deviation**: Fees scale based on how far the USDC/USDT pool price deviates from 1.0
+* **Mathematical Model**: The 3x² - 2x³ curve ensures fees increase proportionally to market volatility
+
+#### Visual Representation
+
+The fee structure can be visualized with:
+
+* **Y-axis**: Trading fees (ranging from 0.003% to 0.01%)
+* **X-axis**: Price deviation from 1.0 (e.g., 0.4% deviation means current price is 1.004)
+
+<figure><img src="https://1779047404-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1GnplQv2H5lIIg0ygng0%2Fuploads%2FZ3sVwOyf7X8Tgm6D74q6%2Fimage.png?alt=media&#x26;token=8ce15094-9bdc-4237-ae69-73ac809d4922" alt=""><figcaption></figcaption></figure>
+
+#### Implementation Example
+
+| Price Deviation | Applied Fee |
+| --------------- | ----------- |
+| 0.000% (at peg) | 0.003%      |
+| 0.100%          | \~0.004%    |
+| 0.200%          | \~0.006%    |
+| 0.300%          | \~0.008%    |
+| 0.400%+         | 0.010%      |
+
+### Benefits of Dynamic Fees
+
+This implementation offers several advantages:
+
+1. **Enhanced Market Efficiency**: Lower fees during stable market conditions encourage trading and arbitrage resulting in higher volumes
+2. **Volatility Protection**: Higher fees during price deviations restricts the change of pool price and makes it stay in range
+3. **Balanced Incentives**: Optimizes between trading volume and tradingAPR
+
+### Future Considerations
+
+The protocol governance continues to monitor this implementation and may propose adjustments based on:
+
+* Market conditions
+* Competitive landscape
+* Feedback from traders and liquidity providers
+
+
+
+
+
+
